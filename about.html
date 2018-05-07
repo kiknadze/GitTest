@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, th, td {
+                border: 1px solid black;
+                //border-collapse:collapse;
+                text-align:center;
+                //background-color:yellow;
+            }
+        th, td {
+            padding:15;
+        }
+        table {
+            width:50%;
+        }
+        td:hover, th:hover {
+            background-color:red;
+        }
+        thead, tfoot{
+            background-color:blueviolet;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <ul style="list-style-type: decimal;">
+        <li>Take an Italian Berlitz course.</li>
+        <li>move to italiy.
+            <ol type="I">
+                <li>Have a yard sale</li>
+                <li>pack what's left</li>
+                <li>ship boxes</li>
+                <li>jump on plane</li>
+            </ol>
+        </li>
+        <li>Say "cio!" upon landing.</li>
+    </ul>
+    <table class="one">
+        <tr>
+            <th colspan="7">NOVEMBER</th>
+        </tr>
+        <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <table>
+        <tr>
+            <td rowspan="3" colspan="2">111</td>
+            <td>111</td>
+            <td rowspan="4">111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td rowspan="6">111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td rowspan="4" colspan="2">111</td>
+            <td>111</td>
+            <td>111</td>            
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td rowspan="3">111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td rowspan="3">333</td>
+        </tr>
+        <tr>
+            <td rowspan="3" colspan="3">111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+    </table>
+
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">This is a thead of table</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="4">This is a footer of table</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 1</td>
+                <td>cell 1</td>
+                <td>cell 1</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 1</td>
+                <td>cell 1</td>
+                <td>cell 1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

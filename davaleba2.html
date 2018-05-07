@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, td, th{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        textarea{
+            resize:vertical;
+        }
+    </style>
+</head>
+<body>
+    <form action="დავალება.html" method="post" name="myForm">
+    <table>
+        <thead>
+            <tr>
+            <th>Control Type</th>
+            <th>Data</th>
+            <th>Control</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Buttons</td>
+                <td>Actions:</td>
+                <td>
+                    <button type="submit" value="Submit">Submit</button> 
+                    <button type="reset" value="Reset">Reset</button> 
+                    <button>Button</button>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Text Box</td>
+                <td><label for="firstname">Name:</label></td>
+                <td><input type="text" name="firstname" id="firstname" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Text Area</td>
+                <td><label for="">Address:</label></td>
+                <td><textarea rows="4" cols="21"></textarea></td>
+            </tr>
+            <tr>
+                <td>Drop Down List</td>
+                <td>Area:</td>
+                <td>
+                    <select name="area">
+                        <option value="center">Center</option>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check Box</td>
+                <td>Hobbies:</td>
+                <td>
+                        <input type="checkbox" name="hobies[]" value="Bike"> Sport<br>
+                        <input type="checkbox" name="hobies[]" value="Reading"> Reading<br>
+                        <input type="checkbox" name="hobies[]" value="TV"> T.V.<br>
+                        <input type="checkbox" name="hobies[]" value="Internet"> Internet<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Radio Buttons</td>
+                <td>Gender:</td>
+                <td>
+                    <fieldset>
+                        <legend>Gender Selection</legend>
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>File Upload</td>
+                <td>Your Image:</td>
+                <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</body>
+</html>
