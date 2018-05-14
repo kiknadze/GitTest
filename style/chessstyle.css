@@ -1,0 +1,26 @@
+table, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color:white;
+    margin: auto;
+}
+
+td, tr {
+    height:80px;
+    width:80px;
+    font-size: 50px;
+}
+
+tr.odd > td:nth-child(2n+1) {
+    background-color: grey;
+}
+
+tr.even > td:nth-child(2n+2) {
+    background-color: gray;
+}
+
+/*მარტივი გზა გუგლის დახმარებით, პროსტა ბეგრაუნდს თეიბლის შავად ვცვლით
+ tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+	background: white;
+} */

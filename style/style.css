@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    text-align: center;
+}
+
+#header2 {
+    text-align: center;
+}
+
+p.right {
+    text-align: right;
+}
+
+#header3 {
+    text-align: center;
+    color:red;
+}
