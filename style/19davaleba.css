@@ -1,0 +1,59 @@
+div {
+text-align: left;
+width: 400px;
+height: 400px;
+position: relative;
+display: inline-block;  
+}
+
+.a, .b, .c {
+    background-color: grey;
+    position: relative;
+    width: 380px;
+    height: 380px;
+}
+
+.pirveli {
+    position: absolute;
+    background-color:red;
+    width:100px;
+    height:100px;
+    right:0;
+    bottom:0;
+}
+
+.meore {
+    position: absolute;
+    background-color:red;
+    width:200px;
+    height:200px;
+    left:0;
+    bottom:0;
+}
+
+.meorepirveli {
+    position: absolute;
+    background-color:rgb(0, 255, 42);
+    width:100px;
+    height:100px;
+    right:0;
+    top:0;
+}
+
+.mesame {
+    position: absolute;
+    background-color:orange;
+    width:200px;
+    height:200px;
+    left:0;
+    top:0;
+}
+
+.mesamepirveli {
+    position: absolute;
+    background-color:rgb(85, 24, 143);
+    width:100px;
+    height:100px;
+    right:0;
+    top:0;
+}
