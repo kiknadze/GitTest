@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body > div:first-child {
+            width: 250px;
+            height: 100px;
+            background-color: #e0e0e0;
+            overflow: hidden;
+            /*initial, inherit, unset, auto, scroll, hidden, visible */
+        }
+
+        .outer {
+            border: 5px dotted green;
+            border-radius: 5px;
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+        .float {
+            padding: 10px;
+            border: 5px solid red;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            float: left;
+            width: 200px;
+            margin: 0 20px 0 0;
+        }
+        .overflow {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis omnis at maiores magni et dicta doloribus ullam inventore, minima possimus libero ipsa debitis commodi corrupti. Accusantium eum quae laudantium fugiat.Praesentium impedit iste excepturi mollitia reprehenderit. Reiciendis cupiditate suscipit nam, eligendi, itaque dolor deserunt tempore magnam deleniti expedita maiores? Dignissimos hic ipsa inventore earum vero amet distinctio saepe, quae ex?
+    </div>
+
+    <hr>
+
+    <h2>Floated: Plenty of Text</h2>
+    <div class="outer">
+        <div class="float">
+            I am a floated element
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi porro perferendis ex maxime magni, unde asperiores blanditiis omnis, atque ipsa distinctio quo provident error aliquid nemo dolor et, tenetur labore?Natus pariatur ipsum fugit voluptate, sunt, dolorem veniam rem asperiores, odio quo blanditiis voluptas fugiat commodi tempore temporibus sit totam ad culpa in alias delectus ipsa sint. Omnis, consequuntur nam?
+    </div>
+
+    <h2>Floated: not enough text</h2>
+    <div class="outer">
+        <div class="float">
+            I am a floated element
+        </div>
+        Lorem ipsum dolor sit amet
+    </div>
+
+    <h2>Floated: overflow solution</h2>
+    <div class="outer overflow">
+        <div class="float">
+            I am a floated element
+        </div>
+        Lorem ipsum dolor sit amet consectetur
+    </div>
+</body>
+</html>
