@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* div {
+        margin: 20px;
+        width: 300px;
+        height: 100px;
+        background-color: chartreuse;
+        border: 1px solid #333;
+    } */
+    div.translate {
+        transform: translate(50px, 100px);
+    }
+    div.rotate:hover {
+        transform: rotate(90deg);
+    }
+    div.scale:hover {
+        transform: scale(2,2) translate(100px, 20px);
+    }
+    div.skew:hover {
+        transform: skew(20deg, -10deg);
+    }
+    div.tra {
+        width: 200px;
+        height: 200px; 
+        transform: translate(200px, 200px);
+        background-color: royalblue;
+        transition-property: width, height;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.3,1.13,.86,0.05);
+    }
+    div.tra:hover {
+        background-color: seagreen;
+        border-radius: 50%;
+        border: 2px solid black;
+        transform: translate(200px, 200px) scale(2,2);
+    }
+    div.animation {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: myanimation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+    }
+    @keyframes myanimation {
+        0% {
+            background-color: red;
+        }
+        25% {
+            background-color: yellow;
+        }
+        50% {
+            background-color: blue;
+        }
+        100% {
+            background-color: green;
+        }
+    }
+    div.banner {
+        position: absolute;
+        left: calc(40px);
+        width: calc(100% - 80px);
+        border: 1px solid #333;
+        box-shadow: 1px 2px;
+        background-color: seagreen;
+        text-align:center;
+        box-sizing: border-box;
+        color: #fff;
+        padding: 15px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Css Transforms</h1>
+
+    <div class="translate">
+        translate: x: 50px, y: 100px;
+    </div>
+    <div class="rotate">
+        rotate: 90deg
+    </div>
+    <div class="scale">
+        scale: 90deg
+    </div>
+    <div class="skew">
+        skew element
+    </div>
+
+    <div class="tra">
+
+    </div>
+    <hr>
+    <div class="animation">
+
+    </div>
+
+    <div class="banner">
+        this is banner
+    </div>
+</body>
+</html>

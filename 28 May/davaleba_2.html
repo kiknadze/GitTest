@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div.main {
+        width: 100%;
+        border: 1px solid black;
+    }
+    div.kubi {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        animation-name: myanimation;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes myanimation {
+        0% {
+            margin-left: calc(0% + 5px);
+        }
+        50% {
+            margin-left: calc(50% - 100px);
+        }
+        100% {
+            margin-left: calc(100% - 205px);
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="main">
+        <div class="kubi"></div>
+</div>
+</body>
+</html>
