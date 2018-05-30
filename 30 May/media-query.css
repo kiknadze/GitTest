@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+.wrapper {
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+h1 {
+    
+}
+
+h2 {}
+
+img {
+    max-width: 100%;
+    padding: 10px;
+}
+
+figure {
+    margin: 0;
+    background-color: black;
+    width: 300px;
+}
+figcaption {
+    color: white;
+    text-align: center;
+}
+
+@media all and (min-width: 600px){
+    .figure {
+        flex: 3 100%;
+        background-color: yellow;
+        font-size: 1.2em;
+    }
+    body {
+        background-color: orange;
+    }
+}
+
+@media all and (min-width: 800px){
+
+    body {
+        max-width: 1000px;
+        margin: auto;
+        background-color: red;
+    }
+    figure {
+        flex: 3 auto;
+        justify-content: flex-start;
+
+    }
+}

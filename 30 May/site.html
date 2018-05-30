@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .wrapper > * {
+            padding: 10px;
+            flex: 1 100%;
+        }
+
+        .header {
+            background-color: seagreen;
+        }
+
+        .footer {
+            background-color: lightgreen;
+        }
+        .main {
+            text-align: left;
+            background-color: darkcyan;
+        }
+        .aside-1 {
+            background-color: gold;
+        }
+        .aside-2 {
+            background-color: pink;
+        }
+        
+        @media all and (min-width: 600px){
+            .aside {
+                flex: 1 auto;
+            }
+        }
+
+        @media all and (min-width: 800px) {
+            .main {
+                flex: 3 0px;
+            }
+            .aside-1 {
+                order: 1;
+            }
+            .main{
+                order: 2;
+            }
+            .aside-2 {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <article class="main">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem maxime accusantium quidem facere quisquam culpa optio accusamus. Reiciendis at, provident est nobis quaerat magni quam saepe et nostrum numquam tenetur?
+                Ad facilis distinctio accusantium alias! Corrupti, beatae? Molestiae voluptatum vel quae facilis enim similique impedit? Provident dolore voluptatum magni iste eaque dicta eius atque natus nulla! Illum commodi sequi cumque?
+                Veritatis deleniti laudantium quo quibusdam harum blanditiis sunt alias. Aliquid dolor tempora ipsum tenetur eaque fuga error asperiores culpa. Accusamus dicta commodi fuga explicabo doloribus harum necessitatibus officia voluptates corrupti.
+                Fugiat qui nobis a cumque. Est a harum suscipit quae fugit veritatis quisquam mollitia maiores id, autem ea sed nesciunt eum! Molestiae sed dignissimos ab facere autem illum reiciendis expedita?
+                Earum, enim ea possimus pariatur reprehenderit officia veritatis accusantium, libero porro rem dignissimos, aperiam tempora saepe beatae dolore nesciunt ab vitae obcaecati voluptas velit labore commodi nobis consequuntur. Quia, dicta.
+            </p>
+        </article>
+        <aside class="aside aside-1">Aside1</aside>
+        <aside class="aside aside-2">Aside2</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

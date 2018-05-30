@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+        .flex-container {
+            max-width: 800px;
+            /* height: 400px; */
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            /* flex-direction: row; */
+            flex-flow: column wrap;
+            align-items: stretch;
+            justify-content: space-evenly;
+            /* flex-flow: row; */
+        }
+        .flex-item {
+            background-color: seagreen;
+            padding: 5px;
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+            line-height: 150px;
+            color: #fff;
+            font-size: 3em;
+            text-align: center;
+            font-weight: bold;
+            align-items: stretch;
+            
+        }
+        .flex-item:first-child {
+            order: 2;
+            /* flex-grow: 2; */
+        }
+        .flex-item:nth-child(2) {
+            order: 1;
+        }
+        .flex-item:nth-child(3) {
+            order: 3;
+        }
+        .flex-item:nth-child(4) {
+            order: 5;
+        }
+        .flex-item:nth-child(5) {
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+    <ul class="flex-container">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+    </ul>
+</body>
+</html>
