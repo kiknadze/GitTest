@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+.image {
+    margin: 20px;
+    text-align: center;
+}
+
+.fjords, .forest, .light, .mountain {
+    border: 1px solid gray;
+    display: inline-block;
+    margin: 20px;
+}
+
+.fjords:hover, .forest:hover, .light:hover, .mountain:hover {
+    border: 1px solid black;
+}
+
+figcaption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

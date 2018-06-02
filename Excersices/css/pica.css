@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: inline-block;
+}
+
+.left, .right, .main {
+    float: left;
+}
+
+.left, .right {
+    width: 25%;
+    position: relative;
+}
+
+.main {
+    width: 50%;
+}
+
+footer {
+    background-color: green;
+    width: 100%;
+    color: white;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+}
+
+nav {
+    padding: .15em 0;
+    width: 100%;
+}
+
+img {
+    height: 400px;
+
+}
