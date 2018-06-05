@@ -1,0 +1,350 @@
+.topmenu {
+    background-color: #f6f6f6;
+    width: 100%;
+    display: inline-block;
+}
+
+.topmenuleft ul{
+    float: left;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: left;
+    align-items: left;
+    width: 45%;
+    cursor: pointer;
+}
+
+.topmenuleft ul li {
+    margin-left: 20px;
+    color: #773790;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.topmenuright ul{
+    float: right;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: right;
+    align-items: right;
+    cursor: pointer;
+}
+
+.topmenuright ul li {
+    margin-right: 20px;
+    color: #773790;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.topmenuright ul li img {
+    width: 30px;
+}
+
+.topmenuright ul li.mygeocell {
+    background-color: #0083be;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: -5px;
+}
+
+.menu {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.mainmenu ul{
+    float: left;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: left;
+    align-items: left;
+    cursor: pointer;
+}
+
+.mainmenu ul li {
+    margin-left: 20px;
+    color: #773790;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.mainmenu ul li img {
+    width: 150px;
+    height: 40px;
+    margin-top: -15px;
+    margin-right: 10px;
+    margin-left: -15px;
+}
+
+.mainmenuright {
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    color: #773790;
+    font-size: 22px;
+
+}
+
+.slidshow img {
+    width: 100%;
+    height: 480px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+
+}
+
+.smartphonestitle {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.smartphonestitle h2:nth-child(1) {
+    margin-right: 20px;
+    color: #773790;
+    border-bottom: 3px solid #773790;
+    padding-bottom: 5px;
+}
+
+.smartphonestitle h2:nth-child(2) {
+    margin-left: 20px;
+    color: gray;
+}
+
+.phones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.iphoneX,
+.iphone8p,
+.iphone8,
+.iphone7 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.photo img{
+    width: 200px;
+    height: 250px;
+}
+
+.phonetitle {
+    font-size: 20px;
+    color: #773790;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #0083be;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.iphoneX:hover,
+.iphone8p:hover,
+.iphone8:hover,
+.iphone7:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #773790;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 30px;
+    border: 2px solid #d80080;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100px;
+    color: #d80080;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.dot1 {
+    height: 15px;
+    width: 15px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.dot2 {
+height: 15px;
+width: 15px;
+background-color: #c0c0c0;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot3 {
+height: 15px;
+width: 15px;
+background-color: #e8d6c2;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot4 {
+height: 15px;
+width: 15px;
+background-color: #edccbd;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot5 {
+height: 15px;
+width: 15px;
+background-color: #0a0a0a;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot6 {
+height: 15px;
+width: 15px;
+background-color: #a5212c;
+border-radius: 50%;
+display: inline-block;
+}
+
+.company {
+    width: 100%;
+    height: 506px;
+    background-color: #0083be;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.act {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.comtit {
+    font-size: 20px;
+    color: white;
+}
+
+.activiti {
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+margin-left: 20px;
+align-items: center;
+}
+
+.activiti:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.activitiphoto img{
+    width: 291px;
+    height: 181px;
+}
+
+.activtit {
+    color: white;
+    text-align: center;
+}
+
+.activtim {
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.actbtn {
+    margin-top: 25px;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lastnews {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lastnewstit {
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+}
+
+.newscont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.news {
+    display: flex;
+    flex: 1 33%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newstit {
+    color: #773790;
+    font-size: 20px;
+    text-align: center;
+}
+
+.newsdat {
+    color: #afa5b2;
+}
+
+.newsall {
+    display: flex;
+    justify-content: center;
+}
+
+.newsbtn {
+    margin-top: 25px;
+    border: 2px solid #d80080;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100px;
+    color: #d80080;
+    font-weight: bold;
+    cursor: pointer;
+    float: center;
+}
