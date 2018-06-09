@@ -452,10 +452,11 @@ footer h3 {
 .socicons i {
     padding-right: 20px;
     cursor: pointer;
+    color: #773790;
 }
 
 .socicons i:hover {
-    opacity: 0.2;
+    opacity: 0.2; 
 }
 
 footer h4 {
