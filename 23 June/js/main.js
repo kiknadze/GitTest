@@ -3,10 +3,10 @@
 // let user = new Object();
 // let user_2 = {};
 
-let user = {
-    name: "John",
-    age: 33
-}
+// let user = {
+//     name: "John",
+//     age: 33
+// }
 
 // user_2.name = "User 2";
 // user_2.age = 30;
@@ -340,19 +340,42 @@ document.write(sum); */
 
 
 
-function Calculator(sityva) {
-    this.sityva = sityva,
-    this.num = sityva.split,
-    this.num1 = Number(sityva[0]),
-    this.num2 = Number(sityva[2]),
-    this.oper = sityva[1],
+function Calculator() {
+    
+    let operaciebi = {
+        "+": (a, b) => a + b,
+        "-": (a, b) => a - b
+    };
 
-    this.moqmedeba = function() {
-        return this.num1, this.oper, this.num2;
+    this.calculate = function(str) {
+        this.operacia = str.split(" "),
+        this.num1 = Number(this.operacia[0]);
+        this.num2 = Number(this.operacia[2]);
+        this.oper = this.operacia[1];
+        
+        return operaciebi[this.oper](this.num1, this.num2)
+        }
+
+        this.addMethod = function(name, func) {
+            operaciebi[name] = func;
+          };
     }
 
 
-}
 
-let calc = new Calculator("3 + 7");
-alert(calc.moqmedeba())
+let calc = new Calculator();
+alert(calc.calculate("7 - 3"));
+
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert(result);
+
+let result1 = powerCalc.calculate("8 / 4");
+alert(result1);
+
+let result2 = powerCalc.calculate("2 * 3");
+alert(result2);
