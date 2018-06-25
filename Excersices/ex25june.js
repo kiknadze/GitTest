@@ -6,23 +6,23 @@ function Car() {
 
     //print last result
     this.save = function() {
-        document.write(`saving ${name}, color - ${color}, brand - ${brand}`)
-    }
+        document.write(`saving ${this.name}, color - ${this.color}, brand - ${this.brand}`)
+    },
 
     //set value to name
     this.setName = function(strname) {
-        name = strname;
-    }
+        this.name = strname;
+    },
 
     //set value to color
     this.setColor = function(strcolor) {
-        color = strcolor;
-    }
+        this.color = strcolor;
+    },
 
     //set value to brand
     this.setBrand = function(strbrand) {
-        brand = strbrand;
-    }
+        this.brand = strbrand;
+    };
 }
 
 //create object
@@ -32,3 +32,4 @@ car.setName('Jetta')
 car.setColor('Platinum Gray Metallic')
 car.setBrand('VW')
 car.save();
+console.log(car.brand)
