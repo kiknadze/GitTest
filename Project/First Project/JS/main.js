@@ -8,8 +8,9 @@ function addDay() {
 
     for(let i=0; i<=studNumb; i++) {
         let myDiv = document.createElement('div');
-        myDiv.setAttribute('class', 'box');
+        myDiv.setAttribute('class', `box ${i}`);
         if(i==0) {
+            myDiv.setAttribute('class', 'boxTitle');
             myDiv.appendChild(document.createTextNode('date'));
         } else {
             myDiv.appendChild(document.createTextNode('0'));

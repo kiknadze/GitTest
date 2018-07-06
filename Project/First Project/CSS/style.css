@@ -100,6 +100,7 @@
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
+    pointer-events: painted;
 }
 
 .UPBTN {
@@ -124,12 +125,23 @@
     flex-direction: column;
 }
 
+.studTitles {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: rgb(255, 153, 0);
+    font-weight: bold;
+    height: 40px;
+}
+
 .stud {
     padding: 10px 10px;
     border: 1px solid black;
     border-top: 0;
     background-color: rgb(255, 153, 0);
     font-weight: bold;
+    height: 40px;
+    margin-top: 5px;
 }
 
 .avarage {
@@ -143,7 +155,19 @@
     border-top: 0;
     background-color: rgb(233, 236, 12);
     text-align: center;
+    height: 40px;
+    margin-top: 5px;
 }
+
+.avarageScoreTitle {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: rgb(255, 153, 0);
+    text-align: center;
+    height: 40px;
+}
+
 .grade {
     display: flex;
     flex-direction: column;
@@ -155,4 +179,19 @@
     border-top: 0;
     background-color: rgb(233, 236, 12);
     text-align: center;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.boxTitle {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: rgb(255, 153, 0);
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
 }
