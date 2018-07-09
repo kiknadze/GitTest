@@ -7,16 +7,16 @@
 .container {
     width: 100%;
     display: flex;
+
 }
 
 .left {
-    width: 20%;
+    width: 300px;
     background-color: rgb(51, 44, 44);
-    height: 100vh;
 }
 
 .right {
-    width: 80%;
+    width: 100%;
     background-color: rgb(85, 80, 80);
 }
 
