@@ -43,14 +43,21 @@ document.querySelector('.addBTN').addEventListener("click", function() {
                 }
                 if(x > 0) {
                     myDiv.style.backgroundColor = 'rgb(255, 153, 0)'; //set background style
-                    myDiv.style.color = '#fff'; //set text color style
+                    if(myDiv.childNodes[0].textContent == 0) { //check if current grade is 0
+                        missedLesson -= 1; 
+                    } 
+                } else { //if prompt is 0 
+                    myDiv.style.backgroundColor = 'rgb(158, 9, 9)'; //set background style
+                    if(myDiv.childNodes[0].textContent > 0) { //check if current grade is over 0
+                        missedLesson += 1; 
+                    }
+                    }
                     myDiv.replaceChild(document.createTextNode(x), myDiv.childNodes[0]); //update old grade to new grade
                     averageCount(); //call average count function
                     averMark(); //call average mark count function
-                    missedLesson -= 1; 
                     //update the number of missed lessons 
                     document.querySelector('.missLesson').replaceChild(document.createTextNode(missedLesson), document.querySelector('.missLesson').childNodes[0]);
-                }
+                
             })
         }
         grade.appendChild(myDiv);
