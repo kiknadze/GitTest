@@ -5,7 +5,7 @@ document.querySelector('.totStud').appendChild(document.createTextNode(studNumb)
 let tableDate = new Date(); //create first lection date
 tableDate.setFullYear(2018, 3, 28);
 
-let totalDays = 0; //crate total day's variable
+let totalDays = 0; //create total day's variable
 
 let missedLesson = 0; //create missed lesson's variable
 

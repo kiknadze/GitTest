@@ -12,6 +12,7 @@
 .left {
     width: 20%;
     background-color: rgb(51, 44, 44);
+    height: 100vh;
 }
 
 .right {
