@@ -36,6 +36,9 @@ document.querySelector('.addBTN').addEventListener("click", function() {
             myDiv.appendChild(document.createTextNode('0')); //insert 0 to all row of gradecolumn
             myDiv.addEventListener("click", function() { //add eventlistener to each grade box
                 let x = prompt("Enter Grade"); //enter grade by user
+                if(isNaN(x)) {
+                    alert("Input must be Number")
+                } else {
                 if(x < 0) { 
                     x = 0;
                 } else if(x > 5) {
@@ -57,7 +60,7 @@ document.querySelector('.addBTN').addEventListener("click", function() {
                     averMark(); //call average mark count function
                     //update the number of missed lessons 
                     document.querySelector('.missLesson').replaceChild(document.createTextNode(missedLesson), document.querySelector('.missLesson').childNodes[0]);
-                
+                }
             })
         }
         grade.appendChild(myDiv);
@@ -89,7 +92,6 @@ document.querySelector('.RMBTN').addEventListener("click", function() {
         let box = document.querySelector('.grade:last-child');
         box.parentNode.removeChild(box);
     }
-
     //make remove button noclickable
     if(!(document.querySelector('.grade'))) {
         document.querySelector('.RMBTN').style.pointerEvents = 'none';
@@ -108,12 +110,16 @@ function averageCount(){
     //count avarage by row
     for(let j=1; j<=studNumb; j++) {
         let aver=document.querySelectorAll(`.box${j}`);
-        let sum=0;
+        let sum = 0;
+        let fullsum = 0;
         for(let i=0; i < totalDays; i++) {
             sum += Number(aver[i].textContent);
+        } 
+        if(totalDays != 0) { //check if total day is 0
+            fullsum = Math.round(((sum/totalDays)*100))/100;
         }
     //update old avarage score to new score
-        document.querySelector(`.avarageScore${j}`).replaceChild(document.createTextNode(Math.round(((sum/totalDays)*100))/100), document.querySelector(`.avarageScore${j}`).childNodes[0]);
+        document.querySelector(`.avarageScore${j}`).replaceChild(document.createTextNode(fullsum), document.querySelector(`.avarageScore${j}`).childNodes[0]);
     }
 }
 
