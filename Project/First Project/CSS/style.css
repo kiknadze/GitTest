@@ -16,7 +16,7 @@
 }
 
 .right {
-    width: 100%;
+    width: calc(100% - 300px);
     background-color: rgb(85, 80, 80);
 }
 
