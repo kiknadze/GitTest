@@ -8,18 +8,17 @@
 .container {
     width: 100%;
     display: flex;
+    min-height: 100vh;
 }
 
 .left {
     width: 300px;
     background-color: rgb(51, 44, 44);
-    min-height: 100vh;
 }
 
 .right {
     width: calc(100% - 300px);
     background-color: rgb(85, 80, 80);
-    min-height: 100vh;
 }
 
 .left-content {
