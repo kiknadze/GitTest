@@ -133,3 +133,33 @@ function averMark() {
     //update old avarage score to new score
     document.querySelector('.averageMark').replaceChild(document.createTextNode(Math.round(((sumM / studNumb)*100))/100), document.querySelector('.averageMark').childNodes[0]);
 }
+
+
+
+//// add function
+
+// document.querySelector(".UPBTN").addEventListener("click", function(){
+//     let newValue = prompt("Enter New Number");
+//     let box = document.querySelector('.grade:last-child');
+//     if(isNaN(newValue)) {
+//         alert("Input must be Number")
+//     } else {
+//     if(newValue < 0) { 
+//         newValue = 0;
+//     } else if(newValue > 5) {
+//         newValue = 5;
+//     }
+//     if(newValue > 0) {
+//         for(let i=1; i<=studNumb; i++) {
+//             box.childNodes[i].textContent=newValue;
+//             box.childNodes[i].style.backgroundColor = 'rgb(255, 153, 0)';
+//         }
+//     } else { //if prompt is 0 
+//         for(let i=1; i<=studNumb; i++) {
+//             box.childNodes[i].textContent=newValue;
+//             box.childNodes[i].style.backgroundColor = 'red';
+//         }}}
+    
+
+    
+// })
