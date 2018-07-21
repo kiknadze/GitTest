@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .con {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+        #div1,
+        #div2,
+        #div3,
+        #div4 {
+            width: 100px;
+            height: 100px;
+            border: 1px black solid;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body onload="myTimer()">
+    <div id="clock"></div>
+    <input type="text" name="timemy" id="timemy"></input>
+    <button id="cont">Continue</button>
+    <br/>
+    <br/>
+    <br/>
+    <div class="con">
+        <input type='text' id='font' placeholder="font size"></input>
+        <input type='text' id='color' placeholder="color"></input>
+        <input type='text' id='textalign' placeholder="text Align"></input>
+        <input type='text' id='idDiv' placeholder="Div ID"></input>
+        <button id='mybtn'>Update</button>
+    </div>
+        
+    <div class="con">
+        <div id='div1'>div1</div>
+        <div id='div2'>div2</div>
+        <div id='div3'>div3</div>
+        <div id='div4'>div4</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
