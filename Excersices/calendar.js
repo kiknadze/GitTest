@@ -3,7 +3,7 @@ function createCalendar(elem, year, month) {
     let currentDate = new Date(Date.UTC(year, month-1, 1));
     let dayget = currentDate.getDay();
     let dayCount = new Date(year, month, 0).getDate();
-
+    elem.textContent = `Month: ${currentDate.getMonth()+1} Year: ${currentDate.getFullYear()}`;
     let tab = document.createElement('table');
     elem.appendChild(tab);
     let monthName = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA']
@@ -16,6 +16,7 @@ function createCalendar(elem, year, month) {
 
     let start=1;
     for(let j=0; j<6; j++) {
+        if(start > dayCount) break;
         let tr = document.createElement('tr');
         tab.appendChild(tr)
         for(let k=0; k<weekday; k++){
@@ -36,4 +37,4 @@ function createCalendar(elem, year, month) {
 
 }
 
-createCalendar(calen, 2018, 12)
+createCalendar(calen, 2018, 7)
