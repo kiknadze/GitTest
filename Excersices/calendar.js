@@ -1,11 +1,8 @@
 function createCalendar(elem, year, month) {
     const weekday = 7;
     let currentDate = new Date(Date.UTC(year, month-1, 1));
-    console.log(currentDate)
     let dayget = currentDate.getDay();
-    console.log(dayget)
     let dayCount = new Date(year, month, 0).getDate();
-    console.log(dayCount)
 
     let tab = document.createElement('table');
     elem.appendChild(tab);
@@ -39,4 +36,4 @@ function createCalendar(elem, year, month) {
 
 }
 
-createCalendar(calen, 2018, 7)
+createCalendar(calen, 2018, 12)
