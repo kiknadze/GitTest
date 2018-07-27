@@ -39,4 +39,7 @@ function createCalendar(elem, year, month) {
 
 }
 
-createCalendar(calen, 2018, 7)
+let year = prompt('Enter Year')
+let month = prompt('Enter Month')
+createCalendar(calen, year, month)
+createCalendar(calen, year, month)
