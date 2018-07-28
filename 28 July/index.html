@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* [date-user-id] {
+            padding: 13px;
+            background-color: brown;
+            margin: 5px;
+            cursor: pointer;
+        } */
+    .title {
+        text-align: center
+    }
+    form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    
+    .row1 {
+        display: flex;
+        flex-direction: column;
+        width: 30%
+    }
+
+    .row2 {
+        display: flex;
+        flex-direction: column;
+        width: 30%
+    }
+
+    .row3 {
+        display: flex;
+        flex-direction: column;
+        width: 30%
+    }
+
+    #imga {
+        display: none;
+        height: 200px;
+    }
+    #answer {
+        display: none;
+    }
+
+    .cont2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .first,
+    .second{
+        display: flex;
+        flex-direction: column;
+        width: 30% 
+    }
+
+    button {
+        background-color: lightseagreen
+    }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='title'>Write something About You</div>
+        <form>
+            <div class='row1'>
+                <label for='day'>Day</label>
+                <input class='inp' type='text' id='day'>
+                <label for='year'>Year</label>
+                <input class='inp' type='text' id='year'>
+                <label for='month'>Month</label>
+                <input class='inp' type='text' id='month'>
+                <label for='city'>City</label>
+                <input class='inp' type='text' id='city'>
+            </div>
+
+            <div class='row2'>
+                <label for='about'>About</label>
+                <textarea rows='6' id='about'></textarea>
+                <button id='save' type='button'>Save</button>
+            </div>
+
+            <div class='row3'>
+                <img src='https://d22wsyl1zemnyu.cloudfront.net/images/frontendfront-logo-share.png' id='imga' draggable="false" alt='FrontEnd'>
+            </div>
+            
+        </form>
+
+        <div id='answer'>
+            <div class='cont2'>
+                <div class='first'>
+                    <div class='birth'>Your birthday is</div>
+                    <div id='birthres'></div>
+                    <hr>
+                    <div class='birth'>Your birthmonth is</div>
+                    <div id='birthmo'></div>
+                    <hr>
+                    <div class='birth'>Your birthyear is</div>
+                    <div id='birthyear'></div>
+                    <hr>
+                </div>
+                <div class='second'>
+                    <div class='birth'>You live in</div>
+                    <div id='live'></div>
+                    <hr>
+                    <div class='birth'>Your about Me</div>
+                    <div id='aboutme'></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="main.js"></script> -->
+    <script src="js.js"></script>
+</body>
+</html>
