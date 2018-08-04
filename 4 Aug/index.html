@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #table {
+            display: flex;
+            justify-content: center;
+        }
+        #left,
+        #right {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+        input {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        button{
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        #save {
+            background-color: seagreen;
+            border-radius: 5px;
+        }
+        #show {
+            background-color: rgb(23, 101, 173);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center
+        }
+
+        #container {
+            max-width: 1000px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+        }
+        .number {
+            background-color: brown;
+            color: white;
+            margin: 5px 5px;
+            border-radius: 5px;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'>
+
+    </div>
+    <button type="button" id="shuffle">Shuffle</button>
+    <button type="button" id="ascending">By ascending</button>
+    <button type="button" id="descending">By Descending</button>
+    <!-- <h1>Save Your Info</h1>
+    <div id='table'>
+        <div id='left'>
+            <label for='name'>Name:</label>
+            <input type='text' name='name' id='name'>
+            <label for='surname'>SurName:</label>
+            <input type='text' name='surname' id='surname'>
+            <label for='age'>Age:</label>
+            <input type='text' name='age' id='age'>
+            <button type="button" id='save'>Save</button>
+            <button type="button" id='show'>Show Info</button>
+        </div>
+        <div id='right'>
+
+        </div>
+    </div> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="main.js"></script>
+</body>
+</html>
