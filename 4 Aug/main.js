@@ -20,39 +20,41 @@ for(let i=1; i<=150; i++) {
     numbers.push(i)
 }
 
+function print() {
+    numbers.forEach(function(element) {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'number');
+        div.textContent = element;
+        container.appendChild(div)
+    })
+}
 
-numbers.forEach(function(element) {
-    let div = document.createElement('div');
-    div.setAttribute('class', 'number');
-    div.textContent = element;
-    container.appendChild(div)
-})
+print()
 
 
 ascending.addEventListener('click', function(){
     numbers.sort((a,b) => a > b)
-    for(let i=0; i<numbers.length; i++) {
-        container.children[i].textContent = numbers[i]
-        container.children[i].addEventListener('click', function() {
-            container.children[i].remove();
-            let index = numbers.indexOf(container.children[i].textContent)
-            numbers.splice(index, 1)
-        });
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
-    console.log(numbers)
+    print();
 })
 
 descending.addEventListener('click', function(){
     numbers.sort((a,b) => a < b)
-    for(let i=0; i<numbers.length; i++) {
-        container.children[i].textContent = numbers[i]
-        container.children[i].addEventListener('click', function() {
-            container.children[i].remove();
-            let index = numbers.indexOf(container.children[i].textContent)
-            numbers.splice(index, 1)
-        });
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
-    console.log(numbers)
+    print();
+    // for(let i=0; i<numbers.length; i++) {
+    //     container.children[i].textContent = numbers[i]
+    //     container.children[i].addEventListener('click', function() {
+    //         container.children[i].remove();
+    //         let index = numbers.indexOf(container.children[i].textContent)
+    //         numbers.splice(index, 1)
+    //     });
+    // }
+    // console.log(numbers)
 })
 
 
@@ -68,13 +70,10 @@ shuffle.addEventListener('click', function shuffle() {
       numbers[currentIndex] = numbers[randomIndex];
       numbers[randomIndex] = temporaryValue;
     }
-  
-    for(let i=0; i<numbers.length; i++) {
-        container.children[i].textContent = numbers[i];
-        container.children[i].addEventListener('click', function() {
-            container.children[i].remove();
-            let index = numbers.indexOf(container.children[i].textContent)
-            numbers.splice(index, 1)
-        });
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
+    print();
+  
   });
