@@ -46,15 +46,6 @@ descending.addEventListener('click', function(){
         container.removeChild(container.firstChild);
     }
     print();
-    // for(let i=0; i<numbers.length; i++) {
-    //     container.children[i].textContent = numbers[i]
-    //     container.children[i].addEventListener('click', function() {
-    //         container.children[i].remove();
-    //         let index = numbers.indexOf(container.children[i].textContent)
-    //         numbers.splice(index, 1)
-    //     });
-    // }
-    // console.log(numbers)
 })
 
 
@@ -77,3 +68,11 @@ shuffle.addEventListener('click', function shuffle() {
     print();
   
   });
+
+  container.addEventListener('click', function(event) {
+    if(event.target != 'container') {
+        let index = numbers.indexOf(Number(event.target.textContent))
+        numbers.splice(index, 1)
+        event.target.remove();
+    }
+  })
