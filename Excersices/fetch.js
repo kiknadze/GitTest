@@ -1,5 +1,6 @@
 if (localStorage.getItem("User0")) {
     console.log('მომხმარებლები უკვე არსებობს')
+    printUsers()
 } else {
         $.ajax({
         url: 'https://jsonplaceholder.typicode.com/users',
