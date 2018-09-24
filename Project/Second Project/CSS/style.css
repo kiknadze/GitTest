@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.canvas {
+    background-color: green;
+    width: 70%;
+    text-align: center;
+}
+
+#snake {
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.menu {
+    width: 30%;
+    background-color: seagreen;
+    
+}
