@@ -4,48 +4,90 @@ const ctx = cvs.getContext("2d");
 // create the unit
 const box = 32;
 
-// load images
-const foodImg = new Image();
-foodImg.src = "Img/apple.png";
+// create the food class
+class Food {
+    constructor(foodImg, x, y, size){
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.foodImg = new Image();
+        this.foodImg.src = foodImg;
+        this.food = {
+            x : Math.floor(Math.random()*this.x+1) * this.size,
+            y : Math.floor(Math.random()*this.y+3) * this.size
+        };
+    }
 
-// create the snake
+    createFood(){
+        return this.food = {
+            x : Math.floor(Math.random()*this.x+1) * this.size,
+            y : Math.floor(Math.random()*this.y+3) * this.size
+        };
+    }
 
-let snake = [];
+    draw(){
+        ctx.drawImage(this.foodImg, this.food.x, this.food.y);
+    }
 
-snake[0] = {
-    x : 9 * box,
-    y : 10 * box
-};
-
-// create the food
-
-let food = {
-    x : Math.floor(Math.random()*17+1) * box,
-    y : Math.floor(Math.random()*15+3) * box
 }
 
-// create the score var
+// create the snake class
+class Snake {
+    constructor(x, y, size){
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.snakear = [];
+    }
+    start(){
+        this.snakear.push({
+            x : this.x * this.size,
+            y : this.y * this.size
+        })
+    }
 
+    draw(){
+        for( let i = 0; i < this.snakear.length ; i++){
+            ctx.fillStyle = ( i == 0 )? "green" : "white";
+            ctx.fillRect(this.snakear[i].x,this.snakear[i].y,box,box);
+            
+            ctx.strokeStyle = "red";
+            ctx.strokeRect(this.snakear[i].x,this.snakear[i].y,box,box);
+        }
+    }
+
+    newHead(newhead){
+        this.snakear.unshift(newhead)
+    }
+
+    removeTail(){
+        this.snakear.pop()
+    }
+    
+}
+let snake = new Snake(9, 10, box);
+snake.start()
+
+let fooding = new Food("Img/apple.png", 17, 15, box)
+
+// create the score var
 let score = 0;
 
 //control the snake
-
 let d;
-
 document.addEventListener("keydown",direction);
-
 function direction(event){
     let key = event.keyCode;
     if( key == 37 && d != "RIGHT"){
        
         d = "LEFT";
-    }else if(key == 38 && d != "DOWN"){
+    } else if(key == 38 && d != "DOWN"){
         d = "UP";
       
-    }else if(key == 39 && d != "LEFT"){
+    } else if(key == 39 && d != "LEFT"){
         d = "RIGHT";
       
-    }else if(key == 40 && d != "UP"){
+    } else if(key == 40 && d != "UP"){
         d = "DOWN";
         
     }
@@ -60,27 +102,23 @@ function collision(head,array){
     }
     return false;
 }
-
+let loop = 0;
 // draw everything to the canvas
-
 function draw(){
-    
+    let id = requestAnimationFrame(draw)
+    if (++loop < 9) {
+        return
+    }
+    loop = 0;
     ctx.fillStyle = "green";
     ctx.fillRect(0, 0, cvs.width, cvs.height)
     
-    for( let i = 0; i < snake.length ; i++){
-        ctx.fillStyle = ( i == 0 )? "green" : "white";
-        ctx.fillRect(snake[i].x,snake[i].y,box,box);
-        
-        ctx.strokeStyle = "red";
-        ctx.strokeRect(snake[i].x,snake[i].y,box,box);
-    }
-    
-    ctx.drawImage(foodImg, food.x, food.y);
+    snake.draw();
+    fooding.draw();
     
     // old head position
-    let snakeX = snake[0].x;
-    let snakeY = snake[0].y;
+    let snakeX = snake.snakear[0].x;
+    let snakeY = snake.snakear[0].y;
     
     // which direction
     if( d == "LEFT") snakeX -= box;
@@ -89,16 +127,13 @@ function draw(){
     if( d == "DOWN") snakeY += box;
     
     // if the snake eats the food
-    if(snakeX == food.x && snakeY == food.y){
-        score++;
-        food = {
-            x : Math.floor(Math.random()*17+1) * box,
-            y : Math.floor(Math.random()*15+3) * box
-        }
+    if(snakeX == fooding.food.x && snakeY == fooding.food.y){
+        score+=10;
+        fooding.createFood();
         // we don't remove the tail
     }else{
         // remove the tail
-        snake.pop();
+        snake.removeTail();
     }
     
     // add new Head
@@ -110,16 +145,17 @@ function draw(){
     
     // game over
     
-    if(snakeX < 0 || snakeX > 18 * box || snakeY < 2*box || snakeY > 18*box || collision(newHead,snake)){
-        clearInterval(game);
+    if(snakeX < 0 || snakeX > 18 * box || snakeY < 2*box || snakeY > 18*box || collision(newHead,snake.snakear)){
+        // clearInterval(game)
+        cancelAnimationFrame(id)
         alert('game over')
     }
     
-    snake.unshift(newHead);
+    snake.newHead(newHead);
 
     ctx.fillStyle = "white";
     ctx.font = "45px Changa one";
-    ctx.drawImage(foodImg, box-10, box-15);
+    ctx.drawImage(fooding.foodImg, box-10, box-15);
 
     ctx.beginPath();
     ctx.fillText(score,2*box,1.6*box);
@@ -131,6 +167,6 @@ function draw(){
     ctx.stroke();
 }
 
-// call draw function every 100 ms
+draw()
+// let game = setInterval(draw, 100);
 
-let game = setInterval(draw,100);
