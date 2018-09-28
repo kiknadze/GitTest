@@ -184,7 +184,7 @@ select:focus{
 }
   
 #highscore {
-    background-image:  url(./Img/text_effect.jpg);
+    background-image:  url(../Img/text_effect.jpg);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     color:  #FFFFFF;
