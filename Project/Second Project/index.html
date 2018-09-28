@@ -4,19 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Snake</title>
 </head>
 <body>
     <div class='container'>
         <div class='canvas'>
-            <canvas id='snake' width='608' height='608'></canvas>
+            <div id='startImg'>
+                <img src='https://helpfulsheep.com/toys/snake.png' width='800' height='700'>
+            </div>
+            <canvas id='snake'></canvas>
         </div>
         <div class='menu'>
-            menu
+            <div class='option'>
+                <h1>Game Options</h1>
+            </div>
+
+            <div id='highscore'></div>
+
+            <div class='level'>
+                <label><h2>Level</h2></label>
+                <select id='level'>
+                        <option value="15">Novice</option>
+                        <option value="10">Intermediate </option>
+                        <option value="5">Hard</option>
+                </select>
+            </div>
+
+            <div id='speed'>
+                <label><h2>Speed</h2></label>
+                <input type='number' id='speednumb' name='speednumb' placeholder='First Choose level'>
+            </div>
+
+            <div class='board'>
+                <label><h2>Board Size</h2></label>
+                <select id='board'>
+                        <option value="320">Small</option>
+                        <option value="608 ">Normal </option>
+                        <option value="704">Full</option>
+                </select>
+            </div>
+
+            <div class='apple'>
+                <label><h2>Number Of Apples</h2></label>
+                <input type='number' id='apple' name='apple' value="1">
+            </div>
+
+            <div class='snakelg'>
+                <label><h2>Length Of Snake</h2></label>
+                <input type='number' id='snakelg' name='snakelg' value="1">
+            </div>
+
+            <button type='button' id='setValue' class='setValue'>Play</button>
+            <button type='button' id='reset' class='reset'>Reset</button>
         </div>
     </div>
 
-    <script src="./JS/snake.js"></script>
+    <script src="snake.js"></script>
 </body>
 </html>
