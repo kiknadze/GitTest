@@ -40,7 +40,7 @@ reset.addEventListener('click', function(){
         bordSize: 320,
         level: 15,
         apple: 1,
-        snake: 1,
+        snake: 3,
         score: 0 
     };
 
