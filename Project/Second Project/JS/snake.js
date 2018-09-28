@@ -14,7 +14,7 @@ let options = {
     bordSize: 320,
     level: 15,
     apple: 1,
-    snake: 3,
+    snake: 1,
     score: 0 
 };
 
@@ -40,7 +40,7 @@ reset.addEventListener('click', function(){
         bordSize: 320,
         level: 15,
         apple: 1,
-        snake: 3,
+        snake: 1,
         score: 0 
     };
 
