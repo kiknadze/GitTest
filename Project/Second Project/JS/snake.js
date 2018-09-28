@@ -209,7 +209,6 @@ function direction(event){
 
 // cheack collision function
 function collision(head,array){
-    console.log(array.length)
     for(let i = 0; i < array.length; i++){
         if(head.x == array[i].x && head.y == array[i].y){
             return true;
