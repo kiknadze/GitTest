@@ -32,11 +32,12 @@
 .menu {
     width: 30%;
     background-color: seagreen;
-    padding: 10px 10px;
+    padding: 0 10px;
 }
 
-#startImg1{
-    position: absolute;
+#startImg > img {
+	width: 750px;
+	height: 550px;
 }
 
 input[type="text"],
@@ -166,11 +167,11 @@ select:focus{
 .option {
     color: #b2bd08;
     text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: -3px;
-    margin: 0 0 35px 0;
+    margin: 0 0 20px 0;
     text-align: center
   }
   
@@ -188,7 +189,7 @@ select:focus{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     color:  #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Arial';
