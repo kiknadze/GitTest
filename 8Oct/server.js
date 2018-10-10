@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path')
 const app = express();
 
+const productsRoutes = require('./src/routes/productRouters')
+
 const PORT = 3000;
 let productsDB = [];
 
@@ -9,6 +11,8 @@ app.set('views', './src/views');
 app.set('view engine', 'pug');
 app.use(express.urlencoded( {extended: true} ));
 app.use(express.static(path.join(__dirname, '/public')))
+
+app.use('/products', productsRoutes);
 
 // app.get('/', (req, res) => {
 
@@ -52,8 +56,11 @@ app.post('/', (req, res) => {
     res.render('index', {
         title: "DEMO Title", 
         added: true, 
-        productsDB})
+        productsDB
+    })
 })
+
+
 
 app.listen(PORT, () => {
     console.log(`Server on Port - ${PORT}`)
