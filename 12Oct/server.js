@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 // })
 
 app.get('/', (req, res) => {
-    res.render('index', { title: "DEMO Title", colorname: req.cookies.color })
+    res.render('index', { title: "Change Color", colorname: req.cookies.color })
 })
 
 app.post('/', (req, res) => {
