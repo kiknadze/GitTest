@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title= title
+    body
+        p 
+            a(href="http://localhost:3000/") Graphics Card
+            span  | 
+            a(href="http://localhost:3000/HDMI") HDMI Cable
+            span  | 
+            a(href="http://localhost:3000/SSD") SSD DRIVE
+            span  | 
+            a(href="http://localhost:3000/Summary") Summary
+        
+        p
+            h1 HDMI Cable
+        p
+            span Picture 
+            img(src="https://images-na.ssl-images-amazon.com/images/I/71pFDaZU8lL._SX425_.jpg", alt="HDMI", width="200")
+        p
+            span Price: 10.00 $
+        p
+            span Description: HDMI Cable X245s
+        p
+            form(action="", method="post")
+                span Quantity: 
+                input(type="number" value=HDMI, name="HDMI")
+                input(type="submit", value="Add To Cart")

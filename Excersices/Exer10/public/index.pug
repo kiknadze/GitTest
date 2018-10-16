@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title= title
+    body
+        p 
+            a(href="http://localhost:3000/") Graphics Card
+            span  | 
+            a(href="http://localhost:3000/HDMI") HDMI Cable
+            span  | 
+            a(href="http://localhost:3000/SSD") SSD DRIVE
+            span  | 
+            a(href="http://localhost:3000/Summary") Summary
+        
+        p
+            h1 Craphics Card
+        p
+            span Picture 
+            img(src="https://images.idgesg.net/images/article/2018/09/msirx570-100772336-large.jpg", alt="Card", width="200")
+        p
+            span Price: 40.00 $
+        p
+            span Description: Craphics Card X245s
+        p
+            form(action="", method="post")
+                span Quantity: 
+                input(type="number" value=Craphics, name="Craphics")
+                input(type="submit", value="Add To Cart")

@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title= title
+    body
+        p 
+            a(href="http://localhost:3000/") Graphics Card
+            span  | 
+            a(href="http://localhost:3000/HDMI") HDMI Cable
+            span  | 
+            a(href="http://localhost:3000/SSD") SSD DRIVE
+            span  | 
+            a(href="http://localhost:3000/Summary") Summary
+        
+        p
+            h1 SSD DRIVE
+        p
+            span Picture 
+            img(src="https://static.makeuseof.com/wp-content/uploads/2011/09/ssd_intro.jpg", alt="SSD DRIVE", width="200")
+        p
+            span Price: 20.00 $
+        p
+            span Description: SSD DRIVE X245s
+        p
+            form(action="", method="post")
+                span Quantity: 
+                input(type="number" name="SSD" value=SSD)
+                input(type="submit", value="Add To Cart")

@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= title
+    body
+        p 
+            a(href="http://localhost:3000/") Graphics Card
+            span  | 
+            a(href="http://localhost:3000/HDMI") HDMI Cable
+            span  | 
+            a(href="http://localhost:3000/SSD") SSD DRIVE
+            span  | 
+            a(href="http://localhost:3000/Summary") Summary
+
+        h1 Summary
+
+        table
+            tr
+                td Name
+                td Price
+                td Quantity
+                td total
+            tr
+                td Graphics Card
+                td 40.00$
+                td= Craphics
+                td= Craphics*40
+            tr
+                td SSD DRIVE
+                td 20.00 $
+                td= SSD
+                td= SSD*20
+            tr
+                td HDMI Cable
+                td 10.00 $
+                td= HDMI
+                td= HDMI*10
+            
