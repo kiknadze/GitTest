@@ -44,7 +44,8 @@ app.post('/SSD', (req, res) => {
 })
 
 app.get('/Summary', (req, res) => {
-    res.render('Summary', { title: "Summary", Craphics: products.Craphics, SSD: products.SSD, HDMI: products.HDMI })
+    let totalPrice = products.Craphics*40 + products.HDMI*10 + products.SSD*20;
+    res.render('Summary', { title: "Summary", Craphics: products.Craphics, SSD: products.SSD, HDMI: products.HDMI, TOTAL: totalPrice })
 })
 
 app.listen(PORT, () => {
