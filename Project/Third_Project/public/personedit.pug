@@ -11,20 +11,9 @@ html
         
         form(action="", method="post")
                 span Person Information: 
-                input(type="text" placeholder="Name", name="name")
+                input(type="text" placeholder="Name", name="name" value= 'JSON.parse(editPerson[0]).name')
                 input(type="text" placeholder="Last Name", name="lastname")
                 input(type="number" placeholder="Personal ID", name="id")
                 input(type="text" placeholder="Father Name", name="fathername")
                 input(type="number" placeholder="Birthdate", name="birthdate")
                 input(type="submit", value="Add")
-        div#persons
-            each val, index in persons
-                div#name= persons[index].name
-                div#lastname= persons[index].lastname
-                div#id= persons[index].id
-                div#fathername= persons[index].fathername
-                div#birthdate= persons[index].birthdate
-                div#delete 
-                    a(href="http://localhost:3000/delete/" + persons[index].id) Delete
-                div#edit 
-                    a(href="http://localhost:3000/edit/" + persons[index].id) Edit
