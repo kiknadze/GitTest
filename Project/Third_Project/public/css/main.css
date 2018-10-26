@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#persons {
+    margin: 10px 10px;
+}
+
+#adding {
+    margin: 10px 10px;
+}
+
+#edit {
+    margin: 10px 10px;
+}
+
+.noCar {
+    width: 50px;
+    height: 50px;
+}
+
+.noPerson {
+    width: 40px;
+    height: 40px;
+}
+
+.personPhoto {
+    width: 30px;
+    height: 30px;
+}
+
+.car {
+    width: 50px;
+    height: 50px;
+}
+
+.modal-title,
+.modal-body,
+.modal-header>span {
+    color: black
+}

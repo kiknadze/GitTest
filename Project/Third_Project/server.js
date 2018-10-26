@@ -1,7 +1,7 @@
 const express     = require('express');
 const path        = require('path')
 const app         = express();
-const controllers = require('./controllers/controller')
+const personController = require('./controllers/controllers')
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 //fire controllers
-controllers(app);
+personController(app);
 
 //listen to port
 app.listen(PORT, () => {

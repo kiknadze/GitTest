@@ -1,0 +1,98 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js", integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49", crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/main.css")
+        title= title
+    body
+        include ./includes/menu.pug
+
+        div#adding
+            form(action="", method="post")
+                div(class="form-row")
+                    div(class="form-group col-md-6")
+                        label(for="name") Name
+                        input(type="text" class="form-control", placeholder="Name", name="name", id="name")
+                    div(class="form-group col-md-6")
+                        label(for="lastname") LastName
+                        input(type="text" class="form-control", placeholder="LastName", name="lastname", id="lastname")
+                div(class="form-row")
+                    div(class="form-group col-md-6")
+                        label(for="fathername") Father Name
+                        input(type="text" class="form-control", placeholder="Father Name", name="fathername", id="fathername")
+                    div(class="form-group col-md-4")
+                        label(for="birthdate") Birthdate
+                        input(type="date" class="form-control", placeholder="Birthdate", name="birthdate", id="birthdate")
+                    div(class="form-group col-md-2")
+                        label(for="id") Personal ID
+                        input(type="text" class="form-control", placeholder="Personal ID", name="id", id="id")
+                button(type="submit", class="btn btn-primary") ADD
+                
+        div#persons
+            table(class='table table-hover table-dark')
+                thead
+                    tr
+                        th(scope="col") #
+                        th(scope="col") Name
+                        th(scope="col") LastName
+                        th(scope="col") Personal ID
+                        th(scope="col") Father Name
+                        th(scope="col") Birthdate
+                        th(scope="col") Delete
+                        th(scope="col") Edit
+                        th(scope="col") Cars
+                        th(scope="col") Status
+                tbody
+                    each val, index in persons
+                        tr
+                            th(scope="row")= index+1
+                            td= persons[index].name
+                            td= persons[index].lastname
+                            td= persons[index].id
+                            td= persons[index].fathername
+                            td= persons[index].birthdate
+                            td
+                                a(href="http://localhost:3000/delete/" + persons[index].id)
+                                    button(type="button" class="btn btn-danger") Delete
+                            td
+                                a(href="http://localhost:3000/edit/" + persons[index].id)
+                                    button(type="button" class="btn btn-success") Edit
+                            if persons[index].cars.length 
+                                td
+                                    button(type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg") Show Owner
+                                    div(class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true")
+                                        div(class="modal-dialog modal-lg")
+                                            div(class="modal-content")
+                                                div(class="modal-header")
+                                                    h5(class="modal-title" id="exampleModalLabel") Cars
+                                                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                                                    span(aria-hidden="true") &times;
+                                                div(class="modal-body")
+                                                    div(class="container-fluid")
+                                                        each valu, i in persons[index].cars
+                                                            div(class="row")
+                                                                div(class="col-md-2 ml-auto") 
+                                                                    img(src="./images/car.png", alt="NO CAR", class="car")
+                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].mark
+                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].model
+                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].vin
+                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].gNumber
+                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].color
+                                                div(class="modal-footer")
+                                                    div(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                            else
+                                td
+                                    img(src="./images/no_car.png", alt="No Car", class="noCar")
+                            td
+                                if persons[index].status == 1
+                                    a(href="http://localhost:3000/status/1/" + persons[index].id)
+                                        button(type="button" class="btn btn-danger") Disable
+                                else
+                                    a(href="http://localhost:3000/status/0/" + persons[index].id)
+                                        button(type="button" class="btn btn-success") Enable
+
+    include ./includes/footer.pug
+                        

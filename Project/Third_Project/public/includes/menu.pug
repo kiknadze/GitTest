@@ -1,0 +1,13 @@
+
+nav(class="navbar navbar-dark bg-dark")
+    a(class="navbar-brand", href="http://localhost:3000") Application
+    ul(class="nav mr-auto")
+        li(class="nav-item")
+            a(class="nav-link", href="http://localhost:3000") Adding Person
+        li(class="nav-item")
+            a(class="nav-link", href="http://localhost:3000/car") Adding Car
+
+    form(action="http://localhost:3000/search", method="post", class="form-inline")
+        input(type="search", placeholder="Personal ID", name="id", class="form-control mr-sm-2")
+        input(type="search", placeholder="Fullname", name="fullname", class="form-control mr-sm-2")
+        button(type="submit", class="btn btn-outline-success my-2 my-sm-0") Search
