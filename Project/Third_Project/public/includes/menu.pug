@@ -6,8 +6,17 @@ nav(class="navbar navbar-dark bg-dark")
             a(class="nav-link", href="http://localhost:3000") Adding Person
         li(class="nav-item")
             a(class="nav-link", href="http://localhost:3000/car") Adding Car
-
-    form(action="http://localhost:3000/search", method="post", class="form-inline")
-        input(type="search", placeholder="Personal ID", name="id", class="form-control mr-sm-2")
-        input(type="search", placeholder="Fullname", name="fullname", class="form-control mr-sm-2")
-        button(type="submit", class="btn btn-outline-success my-2 my-sm-0") Search
+    form(action="", method="post", class="form-inline")
+        select(id="searchPC" name="search" class="form-control mr-sm-2")
+                option(value='1', selected='1') Search Person
+                option(value="2") Search Car
+    div#searchPer
+        form(action="http://localhost:3000/person/search", method="post", class="form-inline")
+            input(type="search", placeholder="Personal ID", name="id", class="form-control mr-sm-2")
+            input(type="search", placeholder="Fullname", name="fullname", class="form-control mr-sm-2")
+            button(type="submit", class="btn btn-outline-success my-2 my-sm-0") Search
+    div#searchCar
+        form(action="http://localhost:3000/car/search", method="post", class="form-inline")
+            input(type="search", placeholder="Car VIN Code", name="vin", class="form-control mr-sm-2")
+            input(type="search", placeholder="Model & Mark", name="markmodel", class="form-control mr-sm-2")
+            button(type="submit", class="btn btn-outline-success my-2 my-sm-0") Search

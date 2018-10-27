@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js", integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49", crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", crossorigin="anonymous")
+        link(rel="stylesheet", href="/css/main.css")
+        title= title
+    body
+        include ./includes/menu.pug
+
+        div#adding
+            form(action="/car/update", method="post")
+                div(class="form-row")
+                    div(class="form-group col-md-4")
+                        label(for="mark") Mark
+                        input(type="text" class="form-control", placeholder="Mark", value= editCar.mark, name="mark", id="mark")
+                    div(class="form-group col-md-4")
+                        label(for="model") Model
+                        input(type="text" class="form-control", placeholder="Model", value= editCar.model, name="model", id="model")
+                    div(class="form-group col-md-4")
+                        label(for="color") Color
+                        input(type="text" class="form-control", placeholder="Color", value= editCar.color, name="color", id="color")
+                div(class="form-row")
+                    div(class="form-group col-md-4")
+                        label(for="gNumber") Car Number
+                        input(type="text" class="form-control", placeholder="Car Number", value= editCar.gNumber, name="gNumber", id="gNumber", required)
+                    div(class="form-group col-md-4")
+                        label(for="vin") Vin Code
+                        input(type="text" class="form-control", placeholder="Vin Code", value= editCar.vin, name="vin", id="vin", required)
+                    div(class="form-group col-md-4")
+                        label(for="owner") Owner
+                        select(id="owner" name="owner" class="form-control")
+                            each person, index in persons
+                                if persons[index].id == editCar.vin && persons[index].status == 1
+                                    option(value= persons[index].id, selected= persons[index].id)= `${persons[index].name} ${persons[index].lastname}`
+                                else 
+                                    option(value= persons[index].id)= `${persons[index].name} ${persons[index].lastname}`
+                button(type="submit", class="btn btn-primary") UPDATE
+    script(src="/js/main.js")  
+    include ./includes/footer.pug

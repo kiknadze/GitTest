@@ -10,33 +10,7 @@ html
     body
         include ./includes/menu.pug
 
-        div#adding
-            form(action="/car/add", method="post")
-                div(class="form-row")
-                    div(class="form-group col-md-4")
-                        label(for="mark") Mark
-                        input(type="text" class="form-control", placeholder="Mark", name="mark", id="mark")
-                    div(class="form-group col-md-4")
-                        label(for="model") Model
-                        input(type="text" class="form-control", placeholder="Model", name="model", id="model")
-                    div(class="form-group col-md-4")
-                        label(for="color") Color
-                        input(type="text" class="form-control", placeholder="Color", name="color", id="color")
-                div(class="form-row")
-                    div(class="form-group col-md-4")
-                        label(for="gNumber") Car Number
-                        input(type="text" class="form-control", placeholder="Car Number", name="gNumber", id="gNumber", required)
-                    div(class="form-group col-md-4")
-                        label(for="vin") Vin Code
-                        input(type="text" class="form-control", placeholder="Vin Code", name="vin", id="vin", required)
-                    div(class="form-group col-md-4")
-                        label(for="owner") Owner
-                        select(id="owner" name="owner" class="form-control")
-                            each person, index in persons
-                                option(value= persons[index].id)= `${persons[index].name} ${persons[index].lastname}`
-                button(type="submit", class="btn btn-primary") ADD
-                
-        div#cars
+        div#searched
             table(class='table table-hover table-dark')
                 thead
                     tr
@@ -49,26 +23,25 @@ html
                         th(scope="col") Delete
                         th(scope="col") Edit
                         th(scope="col") Owner
-                        th(scope="col") Old Owners
                 tbody
-                    each val, index in cars
-                        if cars[index].status == '1'
+                    each val, index in searched
+                        if searched[index].status == '1'
                             tr
                                 th(scope="row")= index+1
-                                td= cars[index].mark
-                                td= cars[index].model
-                                td= cars[index].gNumber
-                                td= cars[index].vin
-                                td= cars[index].color
+                                td= searched[index].mark
+                                td= searched[index].model
+                                td= searched[index].gNumber
+                                td= searched[index].vin
+                                td= searched[index].color
                                 td
-                                    a(href="http://localhost:3000/car/delete/" + cars[index].vin)
+                                    a(href="http://localhost:3000/car/delete/" + searched[index].vin)
                                         button(type="button" class="btn btn-danger") Delete
                                 td
-                                    a(href="http://localhost:3000/car/edit/" + cars[index].vin)
+                                    a(href="http://localhost:3000/car/edit/" + searched[index].vin)
                                         button(type="button" class="btn btn-success") Edit
                                 td
                                     each valu, i in persons
-                                        if persons[i].id == cars[index].persons && persons[i].status == '1'
+                                        if persons[i].id == searched[index].persons && persons[i].status == '1'
                                             button(type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg") Show Owner
                                             - break
                                         else if i == persons.length - 1
@@ -83,7 +56,7 @@ html
                                                 div(class="modal-body")
                                                     div(class="container-fluid")
                                                         each valu, i in persons
-                                                            if persons[i].id == cars[index].persons && persons[i].status == '1'
+                                                            if persons[i].id == searched[index].persons && persons[i].status == '1'
                                                                 div(class="row")
                                                                     div(class="col-md-2 ml-auto") 
                                                                         img(src="../images/person.png", alt="Person", class="personPhoto")
@@ -95,7 +68,7 @@ html
                                                 div(class="modal-footer")
                                                     div(type="button" class="btn btn-secondary" data-dismiss="modal") Close
                                 td
-                                    if cars[index].oldOwners.length > 0
+                                    if searched[index].oldOwners.length > 0
                                         button(type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg") Show Old Owners
                                     else 
                                         img(src="../images/no_person.png", alt="No Person", class="noPerson")
@@ -108,8 +81,8 @@ html
                                                     span(aria-hidden="true") &times;
                                                 div(class="modal-body")
                                                     div(class="container-fluid")
-                                                        if cars[index].oldOwners.length > 0
-                                                            each va, ind in cars[index].oldOwners
+                                                        if searched[index].oldOwners.length > 0
+                                                            each va in searched[index].oldOwners
                                                                 - let oldPerson = persons.find( person => person.id == va )
                                                                 div(class="row")
                                                                     div(class="col-md-2 ml-auto") 
@@ -121,7 +94,6 @@ html
                                                                     div(class="col-md-2 ml-auto")= oldPerson.birthdate
                                                 div(class="modal-footer")
                                                     div(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-
 
     script(src="/js/main.js")  
     include ./includes/footer.pug

@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-#persons {
+#persons,
+#edit,
+#cars {
     margin: 10px 10px;
 }
 
@@ -12,13 +14,9 @@
     margin: 10px 10px;
 }
 
-#edit {
-    margin: 10px 10px;
-}
-
 .noCar {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .noPerson {
@@ -32,12 +30,21 @@
 }
 
 .car {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .modal-title,
 .modal-body,
 .modal-header>span {
     color: black
+}
+
+.alert{
+    text-align: center;
+    margin: 20px 20px;
+}
+
+#searchCar {
+    display: none;
 }

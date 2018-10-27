@@ -5,32 +5,11 @@ html
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js", integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49", crossorigin="anonymous")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", crossorigin="anonymous")
-        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="/css/main.css")
         title= title
     body
         include ./includes/menu.pug
 
-        div#adding
-            form(action="", method="post")
-                div(class="form-row")
-                    div(class="form-group col-md-6")
-                        label(for="name") Name
-                        input(type="text" class="form-control", placeholder="Name", name="name", id="name")
-                    div(class="form-group col-md-6")
-                        label(for="lastname") LastName
-                        input(type="text" class="form-control", placeholder="LastName", name="lastname", id="lastname")
-                div(class="form-row")
-                    div(class="form-group col-md-6")
-                        label(for="fathername") Father Name
-                        input(type="text" class="form-control", placeholder="Father Name", name="fathername", id="fathername")
-                    div(class="form-group col-md-4")
-                        label(for="birthdate") Birthdate
-                        input(type="date" class="form-control", placeholder="Birthdate", name="birthdate", id="birthdate")
-                    div(class="form-group col-md-2")
-                        label(for="id") Personal ID
-                        input(type="text" class="form-control", placeholder="Personal ID", name="id", id="id")
-                button(type="submit", class="btn btn-primary") ADD
-                
         div#persons
             table(class='table table-hover table-dark')
                 thead
@@ -43,7 +22,6 @@ html
                         th(scope="col") Birthdate
                         th(scope="col") Delete
                         th(scope="col") Edit
-                        th(scope="col") Cars
                         th(scope="col") Status
                 tbody
                     each val, index in persons
@@ -59,33 +37,7 @@ html
                                     button(type="button" class="btn btn-danger") Delete
                             td
                                 a(href="http://localhost:3000/edit/" + persons[index].id)
-                                    button(type="button" class="btn btn-success") Edit
-                            if persons[index].cars.length 
-                                td
-                                    button(type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg") Show Owner
-                                    div(class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true")
-                                        div(class="modal-dialog modal-lg")
-                                            div(class="modal-content")
-                                                div(class="modal-header")
-                                                    h5(class="modal-title" id="exampleModalLabel") Cars
-                                                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
-                                                    span(aria-hidden="true") &times;
-                                                div(class="modal-body")
-                                                    div(class="container-fluid")
-                                                        each valu, i in persons[index].cars
-                                                            div(class="row")
-                                                                div(class="col-md-2 ml-auto") 
-                                                                    img(src="./images/car.png", alt="NO CAR", class="car")
-                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].mark
-                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].model
-                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].vin
-                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].gNumber
-                                                                div(class="col-md-2 ml-auto")= persons[index].cars[i].color
-                                                div(class="modal-footer")
-                                                    div(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-                            else
-                                td
-                                    img(src="./images/no_car.png", alt="No Car", class="noCar")
+                                    button(type="button" class="btn btn-success") EdiT
                             td
                                 if persons[index].status == 1
                                     a(href="http://localhost:3000/status/1/" + persons[index].id)
@@ -94,5 +46,42 @@ html
                                     a(href="http://localhost:3000/status/0/" + persons[index].id)
                                         button(type="button" class="btn btn-success") Enable
 
+        div#cars
+            table(class='table table-hover table-dark')
+                thead
+                    tr
+                        th(scope="col") #
+                        th(scope="col") Mark
+                        th(scope="col") Model
+                        th(scope="col") Car Number
+                        th(scope="col") Vin Code
+                        th(scope="col") Color
+                        th(scope="col") Delete
+                        th(scope="col") Edit
+                        th(scope="col") Status
+                tbody
+                    each val, index in cars
+                        
+                        tr
+                            th(scope="row")= index+1
+                            td= cars[index].mark
+                            td= cars[index].model
+                            td= cars[index].gNumber
+                            td= cars[index].vin
+                            td= cars[index].color
+                            td
+                                a(href="http://localhost:3000/car/delete/" + cars[index].vin)
+                                    button(type="button" class="btn btn-danger") Delete
+                            td
+                                a(href="http://localhost:3000/car/edit/" + cars[index].vin)
+                                    button(type="button" class="btn btn-success") Edit
+                            td
+                                if cars[index].status == 1
+                                    a(href="http://localhost:3000/car/status/1/" + cars[index].vin)
+                                        button(type="button" class="btn btn-danger") Disable
+                                else
+                                    a(href="http://localhost:3000/car/status/0/" + cars[index].vin)
+                                        button(type="button" class="btn btn-success") Enable
+    script(src="/js/main.js")  
     include ./includes/footer.pug
                         
