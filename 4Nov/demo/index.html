@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let persons = [
+            {
+                name: 'Vakho',
+                age: 23,
+                id: 1
+            },
+            {
+                name: 'Grigol',
+                age: 20,
+                id: 2
+            },
+            {
+                name: 'Mamuka',
+                age: 20,
+                id: 14
+            },
+            {
+                name: 'Vakho',
+                age: 17,
+                id: 10
+            }
+        ]
+        let personsHTML = persons.map( person => `<p>User - ${person.name}, Id -${person.id}</p>`)
+        let personsFiltered = persons.filter( person => {
+            return person.age < 20
+        }).map( person => `<p>User - ${person.name}, Id -${person.id}</p>`);
+
+        let personsReduced = persons.reduce( (total, current) => {
+            return total += `<p>User - ${current.name}, Id -${current.id}</p>`;
+        }, '');
+        
+        Array.prototype.customReduce = function(callback, first) {
+            let result = first;
+            for(let i=0; i<this.length; i++) {
+                result = callback(result, this[i]);
+            }
+            return result;
+        }
+        
+        
+        console.log(persons.customReduce((total, current) => {
+            return total += `<p>User - ${current.name}, Id -${current.id}</p>`;
+        }, ''))
+
+        document.body.innerHTML = personsHTML.join(' ');
+        document.body.innerHTML += '<hr>';
+        document.body.innerHTML += personsFiltered.join(' ');
+        document.body.innerHTML += '<hr>';
+        document.body.innerHTML += personsReduced;
+        console.table(personsReduced)
+    </script>
+    
+
+</body>
+</html>
