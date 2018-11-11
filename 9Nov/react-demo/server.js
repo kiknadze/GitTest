@@ -7,13 +7,15 @@ const data = require('./data/data.json')
 const app = express();
 let id = 0;
 
-app.set('port', ( process.env.PORT || 3000 ) );
+app.set('port', ( process.env.PORT || 9000 ) );
 app.use( express.static( path.join(__dirname, 'public') ) );
 app.use( express.urlencoded( { extended: true } ) );
 app.use( express.json() );
 
 app.use( (req, res, next) => {
-    res.setHeader('Cache-control', 'no-cache');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Acces-control-Allow-Headers', '*');
     next();
 } )
 

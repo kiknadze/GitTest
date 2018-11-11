@@ -1,18 +1,22 @@
 [
     {
         "name": "Demo Title",
+        "done": true,
         "id": 0
     },
     {
         "name": "Lorem Title",
+        "done": false,
         "id": 1
     },
     {
         "name": "Dolar Sit Title",
+        "done": true,
         "id": 2
     },
     {
         "name": "Javascript Title",
+        "done": false,
         "id": 3
     }
 ]
