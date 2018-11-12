@@ -69,23 +69,23 @@ header {
     background-color: white;
     border-radius: 50px;
     font-weight: bold;
+    border: 0;
     cursor: pointer;
 }
 
 .btnBook:hover {
-    background-color: rgb(212, 199, 199);
+    background-color: #032057;
+    color: white;
+    box-shadow: 0px 0px 5px white;
 }
 
 .footer {
-    /* background-image: url('https://images2.alphacoders.com/238/thumb-1920-238870.jpg'); */
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.8)), url("https://images2.alphacoders.com/238/thumb-1920-238870.jpg");
     background-size: cover;
-    height: 500px;
-    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 .footer > hr {
@@ -103,6 +103,7 @@ header {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 60px;
+    z-index: 1;
 }
 .subscribe-email {
     width: 100%;
@@ -120,6 +121,10 @@ header {
     box-shadow: -2px 5px 5px #4e5e7d;
 }
 
+.subscribe-email > input:focus {
+    box-shadow: 0px 0px 5px #032057;
+}
+
 .btn-sub {
     border-radius: 50px;
     border: 0;
@@ -131,10 +136,18 @@ header {
     font-family: 'Fira Sans Condensed';
 }
 
+.btn-sub:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #032057;
+    color: #032057;
+}
+
 .footer-menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .travel,
@@ -144,8 +157,40 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 50px 80px;
+    margin: 50px 50px;
     font-family: 'Fira Sans Condensed';
+}
+
+.followus {
+    width: 30%;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #032057;
+}
+
+.social-title{
+    font-size: 20px;
+}
+
+.social-icons{
+    margin-top: 20px;
+}
+
+.social-icons > i {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 10px;
+    background: white;
+    margin-left: 20px;
+}
+
+.social-icons > i:hover {
+    background: #4e5e7d;
+    cursor: pointer;
 }
 
 .followus > h2 {
@@ -157,6 +202,495 @@ header {
 
 .followus > hr {
     width: 100%;
+    margin-top: -10px;
     border: 1px solid #032057;
     border-radius: 3px;
+}
+
+.resources-item > h2,
+.company-item > h2,
+.travel-item > h2 {
+    color: #032057;
+}
+
+.resources-item,
+.company-item,
+.travel-item {
+    color: #4e5e7d;
+}
+
+.resources-item:hover,
+.company-item:hover,
+.travel-item:hover {
+    cursor: pointer;
+    color: #032057;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+#gallery-scotland {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.brendanvacations.com/media/1654/eilean-donan-castle-scotland.jpg');
+    background-size: cover;
+}
+
+#gallery-canada {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://thumbnails.trvl-media.com/jZoaPACuLKFQXVzgCGQ8aAKltSU=/768x432/images.trvl-media.com/media/content/shared/images/travelguides/destination/31/Canada-249261.jpg');
+    background-size: cover;
+}
+
+#gallery-italy {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.planetware.com/photos-large/ENG/england-cumbria-lake-district-national-park.jpg');
+    background-size: cover;
+}
+
+#gallery-england {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.whatson.is/wp-content/uploads/2017/02/15346976478_0f7bd05125_k.jpg');
+    background-size: cover;
+}
+
+#gallery-iceland {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.tourradar.com/s3/tour/original/86742_2475543c.jpg');
+    background-size: cover;
+}
+
+#gallery-newzeland {
+    width: 33.3%;
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.visathing.com/wp-content/uploads/2015/03/bg2.jpg');
+    background-size: cover;
+}
+
+.gallery-items h2 {
+    color: white;
+    line-height: 200px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Fira Sans Condensed';
+}
+
+.gallery-items div:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: 2s;
+}
+
+.gallery-title > h2{
+    color: #032057;
+    font-family: 'Fira Sans Condensed';
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 0;
+}
+
+.gallery > hr {
+    width: 3%;
+    margin-left: 15%;
+    margin-top: 50px;
+    border: 2px solid #032057;
+    border-radius: 2px;
+}
+
+.video {
+    margin-top: 50px;
+}
+
+.about-us-sect {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.about-us-desc {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Sans Condensed';
+    margin-left: 50px;
+}
+
+.about-us-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #032057;
+    margin-right: 35%;
+}
+
+.about-us-description-text {
+    margin-top: 30px;
+    color: rgb(75, 71, 71);
+    margin-right: 35%;
+}
+
+.btnabout {
+    margin-top: 30px;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px 40px; 
+    background-color: #54d7b7;
+    box-shadow: 0px 2px 4px #54d7b7;
+    color: white;
+}
+
+.btnabout:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #032057;
+    color: #032057;
+}
+
+.about-us-desc > hr {
+    width: 4%;
+    border: 2px solid #032057;
+    border-radius: 2px;
+    margin-left: 0
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    background-image: url(https://c.s-microsoft.com/en-us/CMSImages/Image_MeetingSpaces_750x500.jpg?version=dde2be25-31c0-80e0-a7e1-4567921d9f26);
+    background-size: cover;
+}
+
+.packages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 30px;
+    font-family: 'Fira Sans Condensed';
+}
+
+.packages > hr {
+    width: 3%;
+    border: 2px solid #032057;
+    border-radius: 2px;
+    margin-left: 0
+}
+
+.packages-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #032057;
+    margin-right: 35%;
+}
+
+#packages-tours {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.popular-tour {
+    width: 22%;
+    position: relative;
+}
+
+.popular-image-barcelona {
+    background-image: url(http://cache-graphicslib.viator.com/graphicslib/thumbs674x446/2140/SITours/barcelona-super-saver-city-tour-sitges-and-freixenet-cava-day-trip-in-barcelona-49929.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.popular-image-chicago {
+    background-image: url(https://graylinechicago.com/files/2415/2534/9176/Buckingham-Fountain-In-Grant-Park.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.popular-image-kathmandu {
+    background-image: url(https://www.1dasia.com/wp-content/uploads/2017/07/kathmandu-valley-tour.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.popular-image-paris {
+    background-image: url(https://www.pluckemininn.com/wp-content/uploads/2017/06/Eiffel-Tower-Night-View.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.popular-desc {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px black;
+    margin-top: 0px;
+}
+
+.popular-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #032057;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.popular-raiting {
+    color: rgb(75, 71, 71);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.popular-arrow {
+    color: rgb(75, 71, 71);
+    margin-top: 25px;
+    margin-left: 80%;
+    font-size: 30px;
+}
+
+.popular-price {
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px black;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 70%;
+    margin-top: -30px;
+    position: absolute;
+    font-weight: bold;
+}
+
+.popular-tour:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.popTraBtn {
+    margin-top: 30px;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px 40px; 
+    background-color: #54d7b7;
+    box-shadow: 0px 2px 4px #54d7b7;
+    color: white;
+}
+
+.popTraBtn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #032057;
+    color: #032057;
+}
+
+.popular-travelling {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+.popular-traveling-left {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Sans Condensed';
+    width: 70%;
+}
+
+.popular-traveling-left > hr {
+    width: 8%;
+    margin-left: 0;
+    border: 2px solid #032057;
+    border-radius: 2px;
+}
+
+.popular-travelling-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #032057;
+}
+
+.popular-travelling-desc {
+    color: rgb(75, 71, 71);
+}
+
+.popular-traveling-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.popular-traveling {
+    width: 30%;
+}
+
+.bankok {
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.avavacations.com/wp-content/uploads/2016/10/bankok.jpg');
+    background-size: cover;
+}
+
+.singapore {
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://assets.media-platform.com/lifehacker/dist/images/2017/06/23/170628singapore_top1-w960.jpg');
+    background-size: cover;
+}
+
+.lasvegas {
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.vox-cdn.com/thumbor/Jn_oDJN1L_cSw52xb6or8rhJ3SY=/0x0:1500x500/1200x900/filters:focal(630x130:870x370)/cdn.vox-cdn.com/uploads/chorus_image/image/55968421/lvnb_banner.0.jpg');
+    background-size: cover;
+}
+
+.popular-traveling > h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 270px;
+    text-align: center;
+}
+
+.popular-traveling:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: 1s;
+}
+
+.popular-travellers {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.popular-traveller-left {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Sans Condensed';
+    width: 70%;
+}
+
+.popular-traveller-left > hr {
+    width: 8%;
+    margin-left: 0;
+    border: 2px solid #032057;
+    border-radius: 2px;
+}
+
+.popular-traveller-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #032057;
+}
+
+.popular-traveller-desc {
+    color: rgb(75, 71, 71);
+}
+
+.popular-traveller-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.popular-traveller {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px #000;
+    font-family: 'Fira Sans Condensed';
+}
+
+.popular-traveller > h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 270px;
+    text-align: center;
+}
+
+.popular-traveller:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: 1s;
+}
+
+.popTravellerBtn {
+    margin-top: 30px;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px 40px; 
+    background-color: #54d7b7;
+    box-shadow: 0px 2px 4px #54d7b7;
+    color: white;
+}
+
+.popTravellerBtn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #032057;
+    color: #032057;
+}
+
+.traveller-picture {
+    background-image: url('https://www.altfg.com/film/wp-content/uploads/images/avatar-sam-worthington-navi-jake.jpg');
+    background-size: cover;
+    width: 130px;
+    height: 130px;
+    border: 10px solid #54d7b7;
+    border-radius: 130px;
+}
+
+.traveller-name {
+    color: #032057;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.traveller-info {
+    background: #54d7b7;
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 5px #54d7b7
+}
+
+.fa-star {
+    color: rgb(236, 236, 24);
 }
