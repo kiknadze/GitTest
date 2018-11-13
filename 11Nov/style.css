@@ -10,12 +10,14 @@ header {
     justify-content: center
 }
 
-.menu-item {
+.menu-item,
+.menu-item > a {
     margin: 50px 20px;
     font-family: 'Fira Sans Condensed';
     font-size: 20px;
     color: white;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .menu-item:hover {
@@ -23,9 +25,10 @@ header {
     color: rgb(223, 208, 208);
 }
 
-.logo {
-    margin-left: 50px;
-    margin-right: 50px;
+.logo,
+.logo > a {
+    margin-left: 30px;
+    margin-right: 30px;
     line-height: 20px;
     font-size: 40px;
     font-style: italic;
@@ -443,7 +446,7 @@ header {
 .popular-desc {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 5px black;
+    box-shadow: 0 2px 5px #032057;
     margin-top: 0px;
 }
 
@@ -471,7 +474,7 @@ header {
 .popular-price {
     font-size: 20px;
     background-color: white;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px #032057;
     width: 70px;
     padding: 10px;
     text-align: center;
@@ -545,6 +548,7 @@ header {
 
 .popular-traveling {
     width: 30%;
+
 }
 
 .bankok {
@@ -618,7 +622,7 @@ header {
     color: rgb(75, 71, 71);
 }
 
-.popular-traveller-right {
+#popular-traveller-right {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -633,8 +637,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 2px 5px #000;
+    box-shadow: 0px 2px 5px #032057;
     font-family: 'Fira Sans Condensed';
+    margin-right: 10px;
 }
 
 .popular-traveller > h2 {
@@ -699,4 +704,229 @@ header {
 
 .fa-star {
     color: rgb(236, 236, 24);
+}
+
+.leftarrow {
+    margin: auto;
+    font-size: 20px;
+    cursor: pointer;
+    color: #032057;
+}
+
+#popular-traveller-slideBTN {
+    margin-right: -10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #032057;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 2px 5px #032057;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 100px;
+    width: 250px;
+    height: 150px;
+    background-color: white;
+}
+
+.box-icon {
+    margin: auto 20px;
+    font-size: 20px;
+    border: 2px solid #032057;
+    color: #032057;
+    padding: 10px 10px;
+    border-radius: 30px;
+
+}
+
+.box-text {
+    margin: auto;
+    margin-left: 10px;
+    font-family: 'Fira Sans Condensed';
+}
+
+.box-text > h2 {
+    color: #032057;
+}
+
+.box-text > h3 {
+    color: #4e5e7d;
+    font-size: 15px;
+}
+
+.contact {
+    font-family: 'Fira Sans Condensed';
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    box-shadow: 0 2px 5px #032057;
+    text-align: center
+}
+
+.half {
+    width: 40%;
+    background: #5f5a5ad7;
+    padding: 10px 10px;
+    border: 0;
+}
+
+.half:focus {
+    box-shadow: 0 0 5px #032057;
+}
+
+.full:focus {
+    box-shadow: 0 0 5px #032057;
+}
+
+.full {
+    width: 83%;
+    background: #5f5a5ad7;
+    padding: 10px 10px;
+    border: 0;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 83%;
+    background: #5f5a5ad7;
+    padding: 10px 10px;
+    border: 0;
+    margin-top: 20px;
+    resize: none;
+}
+
+textarea:focus {
+    box-shadow: 0 0 5px #032057;
+}
+
+#contactBTN {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px 40px; 
+    background-color: #54d7b7;
+    box-shadow: 0px 8px 15px #54d7b7;
+    color: white;
+}
+
+#contactBTN:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #032057;
+    color: #032057;
+}
+
+.contact > h2 {
+    margin-top: 50px;
+    font-size: 50px;
+    color: #032057;
+    font-weight: bold;
+}
+
+.map {
+    margin-top: -80px;
+    height: 600px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/09/BlankMap-World-v2.png);
+    background-size: cover;
+}
+
+.guide {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Fira Sans Condensed';
+}
+
+.guide-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #032057;
+    margin-left: 15%;
+}
+
+.guide > hr {
+    width: 3%;
+    margin-left: 15%;
+    border: 2px solid #032057;
+    border-radius: 2px;
+}
+
+.guides {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 15%;
+    margin-top: 30px;
+}
+
+#guidesSlide {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#guidesBTN {
+    margin: auto 10px auto 0px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #032057;
+}
+
+.guidePropile {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px #032057;
+    font-family: 'Fira Sans Condensed';
+    margin-right: 10px;
+}
+
+.guidePropile:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.guide-picture {
+    background-image: url('https://www.altfg.com/film/wp-content/uploads/images/avatar-sam-worthington-navi-jake.jpg');
+    background-size: cover;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    margin-top: 20px;
+}
+
+.guide-name {
+    color: #032057;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.guide-social > i {
+    margin: 20px 5px;
+    color: white;
+    border: 1px solid #032057;
+    background-color: #032057;
+    border-radius: 20px;
+    padding: 10px 10px;
 }
