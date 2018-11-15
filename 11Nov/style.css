@@ -247,6 +247,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.brendanvacations.com/media/1654/eilean-donan-castle-scotland.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-scotland:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-scotland:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 #gallery-canada {
@@ -254,6 +283,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://thumbnails.trvl-media.com/jZoaPACuLKFQXVzgCGQ8aAKltSU=/768x432/images.trvl-media.com/media/content/shared/images/travelguides/destination/31/Canada-249261.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-canada:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-canada:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 #gallery-italy {
@@ -261,6 +319,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.planetware.com/photos-large/ENG/england-cumbria-lake-district-national-park.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-italy:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-italy:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 #gallery-england {
@@ -268,6 +355,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.whatson.is/wp-content/uploads/2017/02/15346976478_0f7bd05125_k.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-england:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-england:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 #gallery-iceland {
@@ -275,6 +391,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.tourradar.com/s3/tour/original/86742_2475543c.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-iceland:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-iceland:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 #gallery-newzeland {
@@ -282,6 +427,35 @@ header {
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.visathing.com/wp-content/uploads/2015/03/bg2.jpg');
     background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+#gallery-newzeland:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: 33.3%, 250px;
+    transition-property: 33.3%, 250px;
+}
+
+#gallery-newzeland:hover:before{
+    width: 50px;
+    height: 50px;
 }
 
 .gallery-items h2 {
@@ -488,6 +662,7 @@ header {
     cursor: pointer;
     opacity: 0.5;
     transition: 1s;
+    transform: scale(1.1);
 }
 
 .popTraBtn {
@@ -588,6 +763,7 @@ header {
     cursor: pointer;
     opacity: .5;
     transition: 1s;
+    transform: scale(1.1);
 }
 
 .popular-travellers {
@@ -638,6 +814,7 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 5px #032057;
+    transition: ease-in-out 0.5s;
     font-family: 'Fira Sans Condensed';
     margin-right: 10px;
 }
@@ -654,7 +831,8 @@ header {
 .popular-traveller:hover {
     cursor: pointer;
     opacity: .5;
-    transition: 1s;
+    box-shadow: 2px 4px 10px #032057;
+    transform: scale(1.1);
 }
 
 .popTravellerBtn {
@@ -898,6 +1076,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 5px #032057;
+    transition: ease-in-out 0.5s;
     font-family: 'Fira Sans Condensed';
     margin-right: 20px;
 }
@@ -905,6 +1084,8 @@ textarea:focus {
 .guidePropile:hover {
     cursor: pointer;
     opacity: .5;
+    box-shadow: 2px 4px 10px #032057;
+    transform: scale(1.1);
 }
 
 .guide-picture {
