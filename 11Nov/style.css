@@ -694,6 +694,7 @@ header {
     flex-direction: column;
     font-family: 'Fira Sans Condensed';
     width: 70%;
+    margin-right: 20px;
 }
 
 .popular-traveling-left > hr {
@@ -719,7 +720,7 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .popular-traveling {
