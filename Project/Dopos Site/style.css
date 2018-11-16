@@ -1,0 +1,53 @@
+header {
+    margin: 50px 100px 50px 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    font-size: 30px;
+    color: #fb6d55;
+
+}
+
+#mainmenu {
+    margin: auto 50px auto 50px;
+    
+}
+
+#mainmenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 80px;
+}
+
+#mainmenu ul li{
+    line-height: 80px;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+#mainmenu ul li:hover {
+    line-height: 80px;
+    height: 80px;
+    border-bottom: 1px solid #fb6d55;
+    cursor: pointer;
+}
+
+#login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto auto auto 0px;
+}
+
+#loginIcon {
+    font-size: 60px;
+    color: #fb6d55;
+    border: 2px solid #fb6d55;
+    border-radius: 70px;
+}
