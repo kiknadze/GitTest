@@ -1,16 +1,16 @@
 header {
-    margin: 30px 100px 50px 200px;
+    margin: 30px 100px 50px 150px;
     display: flex;
     flex-direction: row;
 }
 
 #logo {
-    font-size: 30px;
+    font-size: 25px;
     color: #fb6d55;
 }
 
 #mainmenu {
-    margin: auto 50px auto 100px;
+    margin: auto 30px auto 40px;
     
 }
 
@@ -28,6 +28,7 @@ header {
     line-height: 80px;
     margin-left: 20px;
     margin-right: 60px;
+    font-size: 15px;
     color: #5c548e;
     font-weight: bold;
 }
@@ -50,22 +51,30 @@ header {
 
 #loginText{
     color: #5c548e;
-    margin: auto 10px auto 100px;
+    margin: auto 10px auto 70px;
     font-weight: bold;
 }
 
 .fa-user-circle {
-    font-size: 50px;
+    font-size: 40px;
     color: #fb6d55;
     border: 2px solid #fb6d55;
     padding: 15px;
     border-radius: 50%;
 }
 
+.fa-user-circle:hover {
+    cursor: pointer;
+    color: #5c548e;
+    border: 2px solid #5c548e;
+    transform: rotateY(180deg);
+    transition: 1s;
+}
+
 #mainSlide {
     display: flex;
     flex-direction: row;
-    margin-left: 200px;
+    margin-left: 150px;
 }
 
 #mainSlideLeft {
@@ -77,7 +86,7 @@ header {
 #mainSlideLeftTitle > h1 {
     margin-top: 100px;
     color: #5c548e;
-    font-size: 55px;
+    font-size: 50px;
 }
 
 #mainSlideLeftDesc {
@@ -132,7 +141,7 @@ header {
 #packages {
     display: flex;
     flex-direction: row;
-    margin: 0px 100px 50px 200px;
+    margin: 0px 100px 50px 150px;
 }
 #packagesLeft {
     width: 30%;
@@ -150,8 +159,8 @@ header {
 
 #packagesLeftItem1,
 #packagesLeftItem2 {
-    height: 410px;
-    width: 410px;
+    height: 350px;
+    width: 350px;
 }
 
 #packagesLeftItem2 {
@@ -169,8 +178,8 @@ header {
 
 #packagesLeftItem1 > h2 {
     color: #5c548e;
-    font-size: 50px;
-    margin-top: 100px;
+    font-size: 40px;
+    margin-top: 70px;
 }
 
 #packagesLeftItem2 > h3 {
@@ -189,15 +198,24 @@ header {
 
 #packagesright1 > img,
 #packagesright2 > img {
-    height: 410px;
-    width: 410px;
+    height: 350px;
+    width: 350px;
 }
 
 #packagesright3 > img,
 #packagesright4 > img {
-    height: 410px;
-    width: 410px;
+    height: 350px;
+    width: 350px;
     margin-top: -4px;
+}
+
+#packagesright1:hover > img,
+#packagesright2:hover > img,
+#packagesright3:hover > img,
+#packagesright4:hover > img {
+    transform: rotateY(360deg);
+    cursor: pointer;
+    transition: 2s;
 }
 
 #ourClients {
@@ -207,7 +225,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-top: 100px;
 }
 
 #ourClients > h2 {
@@ -222,12 +241,24 @@ header {
     margin-left: 50px;
 }
 
+#ourClients > i:hover {
+    cursor: pointer;
+    color: #5c548e;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
 #ourClientsBTN {
     border: 2px solid white;
     padding: 20px 30px;
     border-radius: 30px;
     color: white;
     margin-left: 100px;
+}
+
+#ourClientsBTN:hover {
+    cursor: pointer;
+    background: #5c548e;
 }
 
 footer {
@@ -241,15 +272,15 @@ footer {
 }
 
 #copyright {
-    margin-left: 200px;
+    margin-left: 150px;
     color: #c2d6bb;
-    width: 40%;
+    width: 25%;
 }
 
 #emails {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 55%;
     justify-content: left;
 }
 
@@ -270,8 +301,11 @@ footer {
 }
 
 #rules > h3:hover {
-    color: #fb6d55;
+    color: #5c548e;
     cursor: pointer;
+    border-bottom: 1px solid #5c548e;
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 #emails1 > h2, 
@@ -286,6 +320,14 @@ footer {
     font-size: 15px;
 }
 
+#emails1 > h3:hover, 
+#emails2 > h3:hover {
+    color: #5c548e;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
 #emails2 {
     margin-left: 40px;
 }
@@ -296,12 +338,12 @@ footer {
     align-items: center;
     border-top: 2px solid #f4f5f7;
     height: 150px;
-    margin-top: 10px;
+    margin-top: 100px;
 }
 
 #logobottom{
-    width: 40%;
-    margin-left: 200px;
+    width: 25%;
+    margin-left: 150px;
 }
 
 #logobottom > h2 {
@@ -310,7 +352,7 @@ footer {
 }
 
 #bottomMenuItems {
-    width: 40%;
+    width: 55%;
 }
 
 #social {
@@ -356,10 +398,12 @@ footer {
 #social > i:hover {
     background-color: #5c548e;
     cursor: pointer;
+    transform: rotateY(180deg);
+    transition: 1s
 }
 
 #slidTop {
-    margin-left: 200px;
+    margin-left: 150px;
     margin-top: 100px;
     display: flex;
     flex-direction: row;
@@ -382,10 +426,136 @@ footer {
 
 #slidTopLeft > h2 {
     color: #5c548e;
-    font-size: 50px;
+    font-size: 40px;
 
 }
 
 #slidBot {
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#slidBotLeft {
+    margin-left: 150px;
+}
+
+#slidBotLeft > h3 {
+    color: #5c548e;
+}
+
+#slidBotRight {
+    margin-right: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+#catClient {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+#catClient > h3 {
+    color: #fb6d55;
+    font-size: 15px;
+}
+
+#catClient > h2 {
+    color: #5c548e
+}
+
+#catClient > hr {
+    border: 2px solid #fb6d55;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#blogLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px;
+}
+
+#blogMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+    padding: 50px 50px;
+    box-shadow: 0 0 15px #d7d7e1
+}
+
+#blogright {
+    display: flex;
+    flex-direction: column;
+    margin-right: 300px;
+}
+
+#blogright > i {
+    font-size: 60px;
+    color: #fb6d55;
+}
+
+#blogLeft > h4 {
+    letter-spacing: 5px;
+    color: #fb6d55;
+}
+
+#blogLeft > h2 {
+    color: #5c548e;
+    font-size: 30px
+}
+
+#blogLeft > hr {
+    border: 2px solid #fb6d55;
+    width: 30%;
+    margin: 30px 0px;
+}
+
+#blogMiddle > h4 {
+    letter-spacing: 5px;
+    color: #d7d7e1;
+}
+
+#blogMiddle > h2 {
+    color: #5c548e;
+    font-size: 30px
+}
+
+#blogMiddle > h3,
+#blogMiddle > h5 {
+    color: #fb6d55;
+}
+
+#blogMiddle > hr {
+    border: 2px solid #fb6d55;
+    width: 30%;
+    margin: 30px 0px;
+}
+
+#blogLeft > h3,
+#blogLeft > h5 {
+    color: #5c548e
+}
+
+#blogemail {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: gray;
+    border: 0;
+    border-bottom: 1px solid #d7d7e1
 }

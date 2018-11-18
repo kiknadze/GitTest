@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    constructor(props){
-        super(props);
-        this.handleAddOne = this.handleAddOne.bind(this);
-        this.handleMinusOne = this.handleMinusOne.bind(this);
-        this.handleReset = this.handleReset.bind(this);
-        this.state = {
+    state = {
             count: 0
-        };
     }
 
     componentDidMount(){
@@ -30,7 +24,7 @@ class Counter extends Component {
         }
     }
 
-    handleAddOne(){
+    handleAddOne = () => {
         this.setState((prevState) => {
             return {
                 count: prevState.count + 1
@@ -38,7 +32,7 @@ class Counter extends Component {
         }) 
     }
 
-    handleMinusOne(){
+    handleMinusOne = () => {
         this.setState((prevState) => {
             return {
                 count: prevState.count - 1
@@ -46,7 +40,7 @@ class Counter extends Component {
         }) 
     }
     
-    handleReset(){
+    handleReset = () => {
         this.setState({
             count: 0
         })

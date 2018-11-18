@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 
 class VisibilityToggle extends Component {
-    constructor(props) {
-        super(props);
-        this.handleToggleVisibility = this.handleToggleVisibility.bind(this);
-        this.state = {
+   state = {
             visibility: false
-        }
     }
 
-    handleToggleVisibility(){
+    handleToggleVisibility = () => {
         this.setState((prevState) => {
             return {
                 visibility: !prevState.visibility

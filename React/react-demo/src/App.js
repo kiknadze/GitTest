@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Counter from './components/Counter';
 import VisibilityToggle from './components/VisibilityToggle';
+import OptionModal from './components/OptionModal';
 
-const Options = (props) => {
-  return (
+const Options = (props) => (
     <div>
       <button onClick={props.handleDeleteOptions}>Remove All</button>
       {props.options.length === 0 && <p>Please add an option to get started</p>}
@@ -19,7 +19,6 @@ const Options = (props) => {
       }
     </div>
   );
-};
 
 // class Options extends Component {
 
@@ -35,8 +34,7 @@ const Options = (props) => {
 //   }
 // }
 
-const Option = (props) => {
-  return (
+const Option = (props) => (
     <div>
       {props.optionText}
       <button 
@@ -48,7 +46,6 @@ const Option = (props) => {
       </button>
     </div>
   );
-};
 
 // class Option extends Component {
 //   render(){
@@ -60,8 +57,7 @@ const Option = (props) => {
 //   }
 // }
 
-const Action = (props) => {
-  return (
+const Action = (props) => (
     <div>
       <button 
         onClick={props.handlePick}
@@ -71,7 +67,6 @@ const Action = (props) => {
       </button>
     </div>
   );
-};
 
 // class Action extends Component {
 //   render() {
@@ -89,14 +84,10 @@ const Action = (props) => {
 // }
 
 class AddOption extends Component{
-  constructor(props){
-    super(props);
-    this.handleAddOption = this.handleAddOption.bind(this);
-    this.state = {
+    state = {
       error: undefined
     };
-  }
-  handleAddOption(e){
+  handleAddOption = (e) => {
     e.preventDefault();
     const option = e.target.option.value.trim();
     const error = this.props.handleAddOption(option);
@@ -120,25 +111,25 @@ class AddOption extends Component{
   }
 }
 
-const User = (props) => {
-  return(
+const User = (props) => (
     <div>
       <p>Name: {props.name} </p>
       <p>age: {props.age} </p>
     </div>
   );
-};
+
+const Layout = (props) => (
+    <div>
+      <p>Header</p>
+      {props.children}
+      <p>Footer</p>
+    </div>
+  );
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-    this.handlePick = this.handlePick.bind(this);
-    this.handleAddOption = this.handleAddOption.bind(this);
-    this.handleDeleteOption = this.handleDeleteOption.bind(this);
-    this.state = {
-      options: []
-    }
+  state = {
+      options: [],
+      selectedOption: undefined
   }
 
   componentDidMount(){
@@ -155,34 +146,40 @@ class App extends Component {
     
   }
 
-  componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(prevProps, prevState) {
     if(prevState.options.length !== this.state.options.length) {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem('options', json)
     }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount = () => {
     console.log('Component will unmount')
   }
 
-  handleDeleteOptions(){
+  handleDeleteOptions = () => {
     this.setState( () => ( { options: [] } ) );
   }
 
-  handleDeleteOption(optionToRemove) {
+  handleDeleteOption = (optionToRemove) => {
     this.setState((prevState) => ({
       options: prevState.options.filter( (option) => optionToRemove !== option )
     }))
   }
 
-  handlePick(){
-    const randomNum = Math.floor(Math.random() * this.state.options.length);
-    const option = this.state.options[randomNum];
-    alert(option)
+  handleClearSelectedOption = () => {
+    this.setState(()=>({ selectedOption: undefined }))
   }
 
-  handleAddOption(option) {
+  handlePick = () => {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    const option = this.state.options[randomNum];
+    this.setState(() => ({
+      selectedOption: option
+    }))
+  }
+
+  handleAddOption = (option) => {
     if(!option) {
       return 'Enter valid value to add item';
     } else if(this.state.options.indexOf(option) > -1) {
@@ -212,6 +209,16 @@ class App extends Component {
         <VisibilityToggle />
 
         <User name='Temo' age='25'/>
+        <Layout>
+          <div>
+            <h1>Page Title</h1>
+            <p>This is my page</p>
+          </div>
+          </Layout>
+        <OptionModal 
+          selectedOption={this.state.selectedOption}
+          handleClearSelectedOption={this.handleClearSelectedOption}
+        />
       </div>
     );
   }
