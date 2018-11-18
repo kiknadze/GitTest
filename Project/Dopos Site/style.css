@@ -1,5 +1,5 @@
 header {
-    margin: 50px 100px 50px 200px;
+    margin: 30px 100px 50px 200px;
     display: flex;
     flex-direction: row;
 }
@@ -7,11 +7,10 @@ header {
 #logo {
     font-size: 30px;
     color: #fb6d55;
-
 }
 
 #mainmenu {
-    margin: auto 50px auto 50px;
+    margin: auto 50px auto 100px;
     
 }
 
@@ -20,7 +19,7 @@ header {
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
-    border: 1px solid black;
+    border: 2px solid #f4f5f7;
     border-radius: 50px;
     height: 80px;
 }
@@ -29,13 +28,17 @@ header {
     line-height: 80px;
     margin-left: 20px;
     margin-right: 60px;
+    color: #5c548e;
+    font-weight: bold;
 }
 
 #mainmenu ul li:hover {
     line-height: 80px;
     height: 80px;
-    border-bottom: 1px solid #fb6d55;
+    border-bottom: 2px solid #fb6d55;
+    color: #fb6d55;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #login {
@@ -45,9 +48,344 @@ header {
     margin: auto auto auto 0px;
 }
 
-#loginIcon {
-    font-size: 60px;
+#loginText{
+    color: #5c548e;
+    margin: auto 10px auto 100px;
+    font-weight: bold;
+}
+
+.fa-user-circle {
+    font-size: 50px;
     color: #fb6d55;
     border: 2px solid #fb6d55;
-    border-radius: 70px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#mainSlide {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+}
+
+#mainSlideLeft {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainSlideLeftTitle > h1 {
+    margin-top: 100px;
+    color: #5c548e;
+    font-size: 55px;
+}
+
+#mainSlideLeftDesc {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+#mainSlideLeftDesc > h3 {
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    color: #5c548e;
+    font-size: 20px;
+}
+
+.fa-chart-bar {
+    color: #5c548e;
+    font-size: 60px;
+}
+
+#btn {
+    border: 2px solid #fb6d55;
+    padding: 20px 20px;
+    color: #5c548e;
+    text-align: center;
+    width: 170px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#btn:hover {
+    background-color: #5c548e;
+    color: white;
+    cursor: pointer;
+}
+
+.fa-caret-right {
+    color: #fb6d55;
+    margin-left: 10px;
+}
+
+#mainSlideRight {
+    background-image: url('./Images/slide.jpg');
+    background-size: center;
+    width: 70%;
+    background-position: -100px -150px;
+    height: 750px;
+}
+
+#packages {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 100px 50px 200px;
+}
+#packagesLeft {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#packagesright {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+#packagesLeftItem1,
+#packagesLeftItem2 {
+    height: 410px;
+    width: 410px;
+}
+
+#packagesLeftItem2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#packagesLeftItem1 > h3 {
+    color: #fb6d55;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#packagesLeftItem1 > h2 {
+    color: #5c548e;
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+#packagesLeftItem2 > h3 {
+    color: #5c548e;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+#packagesLeftItem2 > hr {
+    border: 3px solid #fb6d55;
+    border-radius: 6px;
+    width: 15%;
+    margin-left: 0px;
+}
+
+#packagesright1 > img,
+#packagesright2 > img {
+    height: 410px;
+    width: 410px;
+}
+
+#packagesright3 > img,
+#packagesright4 > img {
+    height: 410px;
+    width: 410px;
+    margin-top: -4px;
+}
+
+#ourClients {
+    width: 100%;
+    height: 250px;
+    background-color: #ff6d54;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+#ourClients > h2 {
+    color: white;
+    font-size: 50px;
+    margin-right: 50px;
+}
+
+#ourClients > i {
+    font-size: 150px;
+    color: white;
+    margin-left: 50px;
+}
+
+#ourClientsBTN {
+    border: 2px solid white;
+    padding: 20px 30px;
+    border-radius: 30px;
+    color: white;
+    margin-left: 100px;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: #a2bc99;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyright {
+    margin-left: 200px;
+    color: #c2d6bb;
+    width: 40%;
+}
+
+#emails {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: left;
+}
+
+#rules {
+    margin-right: 150px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right
+}
+
+#rules > h3 {
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    border-bottom: 1px solid #c2d6bb;
+    padding-bottom: 10px;
+}
+
+#rules > h3:hover {
+    color: #fb6d55;
+    cursor: pointer;
+}
+
+#emails1 > h2, 
+#emails2 > h2 {
+    color: #c2d6bb;
+    font-size: 15px;
+}
+
+#emails1 > h3, 
+#emails2 > h3 {
+    color: #fff;
+    font-size: 15px;
+}
+
+#emails2 {
+    margin-left: 40px;
+}
+
+#bottomMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 2px solid #f4f5f7;
+    height: 150px;
+    margin-top: 10px;
+}
+
+#logobottom{
+    width: 40%;
+    margin-left: 200px;
+}
+
+#logobottom > h2 {
+    color: #fb6d55;
+    font-size: 40px;
+}
+
+#bottomMenuItems {
+    width: 40%;
+}
+
+#social {
+    width: 30%;
+    text-align: right;
+    margin-right: 150px
+}
+
+#bottomMenuItems ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    list-style-type: none;
+    height: 150px;
+}
+
+#bottomMenuItems ul li{
+    margin-top: -2px;
+    line-height: 150px;
+    margin-right: 20px;
+    color: #5c548e;
+    font-weight: bold;
+    border-top: 2px solid #f4f5f7;
+}
+
+#bottomMenuItems ul li:hover {
+    line-height: 150px;
+    height: 150px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fb6d55;
+    border-top: 2px solid #fb6d55;
+}
+
+#social > i {
+    margin-left: 20px;
+    background-color: #fb6d55;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
+#social > i:hover {
+    background-color: #5c548e;
+    cursor: pointer;
+}
+
+#slidTop {
+    margin-left: 200px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+#slidTopright {
+    color: #d7d7e1;
+    font-size: 150px;
+    font-weight: bold;
+    margin-right: 150px;
+}
+
+#slidTopLeft > h3 {
+    color: #fb6d55;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#slidTopLeft > h2 {
+    color: #5c548e;
+    font-size: 50px;
+
+}
+
+#slidBot {
+    
 }
