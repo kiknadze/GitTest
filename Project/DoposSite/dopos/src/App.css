@@ -115,7 +115,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto;
+  margin-right: 100px;
+  align-items: center
 }
 
 #loginText{
