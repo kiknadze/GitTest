@@ -2,6 +2,7 @@ header {
     margin: 30px 100px 50px 150px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #logo {
@@ -10,7 +11,7 @@ header {
 }
 
 #mainmenu {
-    margin: auto 30px auto 40px;
+    margin: auto;
     
 }
 
@@ -46,12 +47,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: auto auto auto 0px;
+    margin: auto;
 }
 
 #loginText{
     color: #5c548e;
-    margin: auto 10px auto 70px;
+    margin: auto 10px auto auto;
     font-weight: bold;
 }
 
@@ -141,20 +142,22 @@ header {
 #packages {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 0px 100px 50px 150px;
 }
 #packagesLeft {
-    width: 30%;
+
     display: flex;
     flex-direction: column;
 }
 
 #packagesright {
-    width: 70%;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 40px;
+    justify-content: right;
+    margin-right: 100px;
 }
 
 #packagesLeftItem1,
@@ -408,14 +411,14 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 #slidTopright {
     color: #d7d7e1;
     font-size: 150px;
     font-weight: bold;
-    margin-right: 150px;
+    margin-right: 200px;
 }
 
 #slidTopLeft > h3 {
