@@ -93,7 +93,11 @@ header {
   height: 80px;
 }
 
-#mainmenu ul li{
+#mainmenu ul li a {
+  text-decoration: none;
+}
+
+#mainmenu ul li {
   line-height: 80px;
   margin-left: 20px;
   margin-right: 60px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
+import { Link } from 'react-router-dom';
 
 const Header = (props) => (
     <header>
@@ -7,7 +8,7 @@ const Header = (props) => (
             <h2>Dopos</h2>
         </div>
         <div id='mainmenu'>
-            <Menu items={['HOME', 'PRODUCTS', 'AWARDS', 'CONTACT US']} />
+            <Menu items={[<Link to="/">HOME</Link>, <Link to="/products">PRODUCTS</Link>, <Link to="/awards">AWARDS</Link>, <Link to="/contactus">CONTACT US</Link>]} />
         </div>
         <div id='login'>
             <div id='loginText'>
